@@ -24,7 +24,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_popup_adm
 
 $strName = preg_replace("/[^a-z0-9_\\[\\]:]/i", "", $_REQUEST["strName"]);
 ?>
-<script type="text/javascript">
+<script>
 if(window.parent.document.getElementById("div_<?=$strName?>"))
 	window.parent.document.getElementById("div_<?=$strName?>").innerHTML = '<?=CUtil::JSEscape($res)?>';
 </script>

@@ -341,7 +341,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && strlen($_POST["Update"])>0 && ($USER->C
 		if($arOption[0] === "new_user_email_uniq_check")
 			$arAllOptions["auth"][$i][1] = GetMessage("MAIN_REGISTER_EMAIL_UNIQ_CHECK").($bEmailIndex? "<br>".GetMessage("MAIN_REGISTER_EMAIL_INDEX_WARNING"): "");
 
-	// установка прав групп
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	$module_id = "main";
 	COption::SetOptionString($module_id, "GROUP_DEFAULT_TASK", $GROUP_DEFAULT_TASK, "Task for groups by default");
 	$letter = ($l = CTask::GetLetter($GROUP_DEFAULT_TASK)) ? $l : 'D';
@@ -583,7 +583,7 @@ foreach($arGROUPS as $group):
 </tr>
 <tr>
 	<td colspan="2">
-<script type="text/javascript">
+<script>
 function settingsSetGroupID(el)
 {
 	var tr = jsUtils.FindParentObject(el, "tr");
@@ -624,7 +624,7 @@ function settingsAddRights(a)
 
 <?$tabControl->Buttons();?>
 
-<script type="text/javascript">
+<script>
 function RestoreDefaults()
 {
 	if(confirm('<?echo AddSlashes(GetMessage("MAIN_HINT_RESTORE_DEFAULTS_WARNING"))?>'))

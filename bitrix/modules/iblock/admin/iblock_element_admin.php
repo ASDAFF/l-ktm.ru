@@ -3067,7 +3067,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_aft
 //We need javascript not in excel mode
 if((!isset($_REQUEST["mode"]) || $_REQUEST["mode"]=='list' || $_REQUEST["mode"]=='frame') && $bCatalog && $bCurrency)
 {
-	?><script type="text/javascript">
+	?><script>
 		top.arCatalogShowedGroups = new Array();
 		top.arExtra = new Array();
 		top.arCatalogGroups = new Array();
@@ -3187,7 +3187,7 @@ if ($boolSKU && $boolSKUFiltrable)
 }
 
 $oFilter = new CAdminFilter($sTableID."_filter", $arFindFields);
-?><script type="text/javascript">
+?><script>
 var arClearHiddenFields = [];
 function applyFilter(el)
 {

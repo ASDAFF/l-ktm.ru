@@ -345,7 +345,7 @@ if(CHTMLPagesCache::IsOn())
 				<span class="bx-composite-btn bx-btn-white" style="background-color: #51c1ef;" href="#" onclick="selectPreset('#51C1EF', 'white')"><?=GetMessage("COMPOSITE_BANNER_TEXT")?></span>
 			</span>
 		</div>
-		<script type="text/javascript">
+		<script>
 
 			BX.ready(function() {
 

@@ -51,7 +51,7 @@ foreach($arParams["BUTTONS"] as $val)
 			if ($arParams["TEXT"]["~SHOW"] != "Y"):?>
 			<div class="feed-add-close-icon" onclick="window['<?=$arParams["JS_OBJECT_NAME"]?>'].showPanelEditor(false);" id="bx-panel-close"></div><?
 			endif;?>
-<script type="text/javascript">
+<script>
 	BX.message({
 		'BX_FPD_LINK_1':'<?=GetMessageJS("MPF_DESTINATION_1")?>',
 		'BX_FPD_LINK_2':'<?=GetMessageJS("MPF_DESTINATION_2")?>',
@@ -130,7 +130,7 @@ if (IsModuleInstalled("fileman"))
 			foreach($arParams["ADDITIONAL"] as $key => $val) {
 				$arParams["ADDITIONAL"][$key] = array("text" => $val, "onclick" => "BX.PopupMenu.Data['menu-more".$arParams["FORM_ID"]."'].popupWindow.close();");
 			}
-			?><script type="text/javascript">window['more<?=$arParams["FORM_ID"]?>']=<?=CUtil::PhpToJSObject($arParams["ADDITIONAL"])?>;</script><?
+			?><script>window['more<?=$arParams["FORM_ID"]?>']=<?=CUtil::PhpToJSObject($arParams["ADDITIONAL"])?>;</script><?
 			?><div class="feed-add-post-form-but-more" <?
 				?>onclick="BX.PopupMenu.show('menu-more<?=$arParams["FORM_ID"]?>', this, window['more<?=$arParams["FORM_ID"]?>'], {offsetLeft: 42, offsetTop: 3, lightShadow: false, angle: top, events : {onPopupClose : function(popupWindow) {BX.removeClass(this.bindElement, 'feed-add-post-form-but-more-act');}}}); BX.addClass(this, 'feed-add-post-form-but-more-act');"><?
 				?><?=GetMessage("MPF_MORE")?><?
@@ -211,7 +211,7 @@ else
 	?><input type="text" id="post-tags-popup-input-<?=$arParams["FORM_ID"]?>" tabindex="<?=($arParams["TEXT"]["TABINDEX"]++)?>" name="<?=$arParams["TAGS"]["NAME"]?>" size="30" value=""><?
 }?>
 </div>
-<script type="text/javascript">
+<script>
 var BXPostFormTags_<?=$arParams["FORM_ID"]?> = new BXPostFormTags("<?=$arParams["FORM_ID"]?>", "bx-b-tag-input-<?=$arParams["FORM_ID"]?>");
 </script>
 </li>
@@ -225,7 +225,7 @@ if($arParams["DESTINATION_SHOW"] == "Y" || !empty($arParams["TAGS"]))
 if (in_array('socnetlogdest', $array))
 {
 ?>
-<script type="text/javascript">
+<script>
 	var lastUsers = <?=(empty($arParams["DESTINATION"]['LAST']['USERS'])? '{}': CUtil::PhpToJSObject($arParams["DESTINATION"]['LAST']['USERS']))?>;
 	MPFMentionInit('<?=$arParams["FORM_ID"]?>', {
 		jsObjName : '<?=$arParams["LHE"]["jsObjName"]?>',

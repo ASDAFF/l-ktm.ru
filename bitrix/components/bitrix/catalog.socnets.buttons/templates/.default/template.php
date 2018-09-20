@@ -5,7 +5,7 @@
 	<?if($arResult["FB_USE"]):?>
 		<div class="catalog-sb-item fb">
 			<div id="fb-root"></div>
-			<script type="text/javascript">
+			<script>
 				(function(d, s, id)
 				{
 					var js, fjs = d.getElementsByTagName(s)[0];
@@ -51,7 +51,7 @@
 				?>
 			><?=GetMessage("CATALOG_SB_TW_MAKE")?></a>
 
-			<script type="text/javascript">
+			<script>
 				!function(d,s,id)
 				{
 					var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
@@ -76,7 +76,7 @@
 			>
 			</div>
 
-			<script type="text/javascript">
+			<script>
 				window.___gcfg = {lang: '<?=$arResult["GP_LANG"]?>'};
 
 				(function() {
@@ -93,8 +93,8 @@
 
 	<?if($arResult["VK_USE"]):?>
 		<div class="catalog-sb-item vk">
-			<?$APPLICATION->AddHeadString('<script type="text/javascript" src="http://vk.com/js/api/share.js?86" charset="windows-1251"></script>');?>
-			<script type="text/javascript"><!--
+			<?$APPLICATION->AddHeadString('<script src="http://vk.com/js/api/share.js?86" charset="windows-1251"></script>');?>
+			<script><!--
 			document.write(VK.Share.button(
 				{
 					url: "<?=$arResult["URL_TO_LIKE"]?>"<?

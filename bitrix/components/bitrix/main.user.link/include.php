@@ -41,7 +41,7 @@ if (!function_exists('MULChangeOnlineStatus'))
 							$arUserListOnlineHTML_ID[] = "'".$arTmp["HTML_ID"]."'";
 				}
 			}
-			?><script type="text/javascript">
+			?><script>
 				top.jsUtils.addEvent(window, "load", function() {
 
 				var arMULUserList = [<?=implode(",", $arUserListHTML_ID)?>];

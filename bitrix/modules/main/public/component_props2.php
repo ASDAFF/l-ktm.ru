@@ -733,7 +733,7 @@ switch(strtoupper($prop["TYPE"]))
 						break;
 					$data = isset($prop['JS_DATA']) ? $prop['JS_DATA'] : '';
 					$res .= '<input id="__FD_PARAM_'.$ID.'" name="'.$ID.'" value="'.htmlspecialcharsbx($val).'" type="hidden">';
-					$res .= '<script type="text/javascript" src="'.$prop['JS_FILE'].'?v='.@filemtime($_SERVER['DOCUMENT_ROOT'].$prop['JS_FILE']).'"></script>';
+					$res .= '<script src="'.$prop['JS_FILE'].'?v='.@filemtime($_SERVER['DOCUMENT_ROOT'].$prop['JS_FILE']).'"></script>';
 					$res .= '
 					<script>
 					setTimeout(

@@ -66,7 +66,7 @@ if($arParams["BLOG_USE"] == "Y")
 	);
 
 	?>
-	<script type="text/javascript">
+	<script>
 		BX.ready( function(){
 			JCCatalogSocnetsComments.ajaxUrl = "<?=$templateFolder."/ajax.php?IBLOCK_ID=".$arParams["IBLOCK_ID"]."&ELEMENT_ID=".$arParams["ELEMENT_ID"]?>";
 			BX.addCustomEvent("onIblockCatalogCommentSubmit", function(){ JCCatalogSocnetsComments.hacksForCommentsWindow(true); });
@@ -93,7 +93,7 @@ if($arParams["FB_USE"] == "Y")
 		"NAME" => isset($arParams["FB_TITLE"]) && trim($arParams["FB_TITLE"]) != "" ? $arParams["FB_TITLE"] : "Facebook",
 		"CONTENT" => '
 			<div id="fb-root"></div>
-			<script type="text/javascript">
+			<script>
 				(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
@@ -141,7 +141,7 @@ if($arParams["VK_USE"] == "Y")
 		"CONTENT" => '
 			<div id="vk_comments"></div>
 
-			<script type="text/javascript">
+			<script>
 				BX.ready( function(){
 						VK.init({
 							apiId: "'.(isset($arParams["VK_API_ID"]) && strlen($arParams["VK_API_ID"]) > 0 ? $arParams["VK_API_ID"] : "API_ID").'",

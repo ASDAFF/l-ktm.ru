@@ -319,7 +319,7 @@ else:
 		</div>
 	</div>
 <?endif;?>
-	<script type="text/javascript">
+	<script>
 
 		var arStates = eval(<?=$arStates;?>);
 		var Dialog = false;

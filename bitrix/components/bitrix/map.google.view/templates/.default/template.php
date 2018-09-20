@@ -29,7 +29,7 @@ $APPLICATION->IncludeComponent('bitrix:map.google.system', '.default', $arTransP
 	</div>
 </div>
 <?if (is_array($arResult['POSITION']['PLACEMARKS']) && ($cnt = count($arResult['POSITION']['PLACEMARKS']))):?>
-<script type="text/javascript">
+<script>
 
 function BX_SetPlacemarks_<?echo $arParams['MAP_ID']?>()
 {

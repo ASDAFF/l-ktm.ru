@@ -24,7 +24,7 @@ class CompatibleStrategy
 
 	public function preInitialize()
 	{
-		//! вызывается только для публичных страниц только если prolog.php подключался (нет, если prolog_before.php)
+		//! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ prolog.php пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ prolog_before.php)
 		if(defined("FULL_PUBLIC_PAGE") && FULL_PUBLIC_PAGE===true)
 		{
 			if(file_exists($_SERVER["DOCUMENT_ROOT"].BX_PERSONAL_ROOT."/html_pages/.enabled"))
@@ -45,7 +45,7 @@ class CompatibleStrategy
 		if(isset($_COOKIE["BX_STATE"])) unset($_COOKIE["BX_STATE"]);
 		if(isset($_FILES["BX_STATE"])) unset($_FILES["BX_STATE"]);
 
-		// вызывается только для админских страниц
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		if(defined("ADMIN_SECTION") && ADMIN_SECTION===true)
 		{
 			define("NEED_AUTH", true);
@@ -134,7 +134,7 @@ class CompatibleStrategy
 		define("LANG_ADMIN_LID", $arLang["LANGUAGE_ID"]);
 		define("LANGUAGE_ID", $arLang["LANGUAGE_ID"]);
 
-		/// нужна кодировка для конвертации
+		/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		$GLOBALS["APPLICATION"]->reinitPath();
 
 		//global var, is used somewhere
@@ -249,7 +249,7 @@ class CompatibleStrategy
 		require_once($_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/classes/".$GLOBALS["DBType"]."/usertype.php");
 
 		//component 2.0 template engines
-		// нужно до подключения init.php
+		// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ init.php
 		$GLOBALS["arCustomTemplateEngines"] = array();
 	}
 
@@ -262,9 +262,9 @@ class CompatibleStrategy
 		//	$currentUser->getLastName();
 		//\Bitrix\Main\Security\Authentication::copyToSession($currentUser);
 
-		// раскомментировать когда уберем из CurrentUser вызовы USER
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ CurrentUser пїЅпїЅпїЅпїЅпїЅпїЅ USER
 		$GLOBALS["USER"] = new \CUser;
-		define("BX_STARTED", true); // нужен для инфоблоков чтобы понять - определен ли сайт???
+		define("BX_STARTED", true); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ???
 
 		if(!defined("NOT_CHECK_PERMISSIONS") || NOT_CHECK_PERMISSIONS!==true)
 		{
@@ -272,7 +272,7 @@ class CompatibleStrategy
 
 			if($bLogout && $GLOBALS["USER"]->isAuthorized())
 			{
-// этот редирект нужно убирать
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 				$GLOBALS["USER"]->logout();
 				LocalRedirect($GLOBALS["APPLICATION"]->getCurPageParam('', array('logout')));
 			}
@@ -337,7 +337,7 @@ class CompatibleStrategy
 						if ($arAuthResult === true && defined('ADMIN_SECTION') && ADMIN_SECTION === true)
 						{
 							$_SESSION['BX_ADMIN_LOAD_AUTH'] = true;
-							echo '<script type="text/javascript">window.onload=function(){top.BX.AUTHAGENT.setAuthResult(false);};</script>';
+							echo '<script>window.onload=function(){top.BX.AUTHAGENT.setAuthResult(false);};</script>';
 							die();
 						}
 					}

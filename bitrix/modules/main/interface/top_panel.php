@@ -38,7 +38,7 @@ function _showTopPanelButtonsSection($arPanelButtons, $hkInstance, $section = nu
 		endif;
 
 		if ($bHasMenu || $item['TOOLTIP'] && $item['TOOLTIP_ID']):
-?><script type="text/javascript"><?
+?><script><?
 			if ($item['TOOLTIP']):
 				if ($item['TOOLTIP_ID']):
 
@@ -251,7 +251,7 @@ _showTopPanelButtonsSection($arPanelButtons, $hkInstance)
 ?></div><div class="adm-header-right"><?
 if($USER->IsAuthorized() && IsModuleInstalled("search")):
 
-?><div class="adm-header-search-block" id="bx-search-box"><input class="adm-header-search" id="bx-search-input" onfocus="if (this.value=='<?=GetMessage("top_panel_search_def")?>') {this.value=''; BX.addClass(this.parentNode,'adm-header-search-block-active');}" value="<?=GetMessage("top_panel_search_def")?>" onblur="if (this.value==''){this.value='<?=GetMessage("top_panel_search_def")?>'; BX.removeClass(this.parentNode,'adm-header-search-block-active');}" type="text" autocomplete="off" /><a href="#" onclick="BX('bx-search-input').value=''; BX('bx-search-input').onblur();" class="adm-header-search-block-btn"></a></div><script type="text/javascript">
+?><div class="adm-header-search-block" id="bx-search-box"><input class="adm-header-search" id="bx-search-input" onfocus="if (this.value=='<?=GetMessage("top_panel_search_def")?>') {this.value=''; BX.addClass(this.parentNode,'adm-header-search-block-active');}" value="<?=GetMessage("top_panel_search_def")?>" onblur="if (this.value==''){this.value='<?=GetMessage("top_panel_search_def")?>'; BX.removeClass(this.parentNode,'adm-header-search-block-active');}" type="text" autocomplete="off" /><a href="#" onclick="BX('bx-search-input').value=''; BX('bx-search-input').onblur();" class="adm-header-search-block-btn"></a></div><script>
 var jsControl = new JCAdminTitleSearch({
 	'AJAX_PAGE' : '/bitrix/admin/get_search.php?lang=<?=LANGUAGE_ID?>',
 	'CONTAINER_ID': 'bx-search-box',
@@ -422,17 +422,17 @@ return;
 				if($item["LINK"] <> '')
 				{
 					$result .= '<a href="'.$item["LINK"].'" id="'.$id.'" title="'.$item["TITLE"].'"><span class="bx-panel-admin-button-lb"></span><span class="bx-panel-admin-button-text">'.$button_text.'</span><span class="bx-panel-admin-button-rb"></span></a>';
-					$result .= '<script type="text/javascript">BX.admin.panel.RegisterButton({ID: \''.$id.'\', TYPE: \'SMALL\', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
+					$result .= '<script>BX.admin.panel.RegisterButton({ID: \''.$id.'\', TYPE: \'SMALL\', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
 					if($bHasMenu)
 					{
 						$result .= '<a href="javascript:void(0)" id="'.$id.'_menu"><span class="bx-panel-admin-button-text" style="padding:0px !important"><span class="bx-panel-admin-button-arrow"></span></span><span class="bx-panel-admin-button-rb"></span></a>';
-						$result .= '<script type="text/javascript">BX.admin.panel.RegisterButton({ID: \''.$id.'_menu\', TYPE: \'SMALL\', MENU: '.CUtil::PhpToJsObject($item['MENU']).', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
+						$result .= '<script>BX.admin.panel.RegisterButton({ID: \''.$id.'_menu\', TYPE: \'SMALL\', MENU: '.CUtil::PhpToJsObject($item['MENU']).', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
 					}
 				}
 				elseif($bHasMenu)
 				{
 					$result .= '<a href="javascript:void(0)" id="'.$id.'" title="'.$item['TITLE'].'"><span class="bx-panel-admin-button-lb"></span><span class="bx-panel-admin-button-text">'.$button_text.'<span class="bx-panel-admin-button-arrow"></span></span><span class="bx-panel-admin-button-rb"></span></a>';
-					$result .= '<script type="text/javascript">BX.admin.panel.RegisterButton({ID: \''.$id.'\', TYPE: \'SMALL\', MENU: '.CUtil::PhpToJsObject($item['MENU']).', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
+					$result .= '<script>BX.admin.panel.RegisterButton({ID: \''.$id.'\', TYPE: \'SMALL\', MENU: '.CUtil::PhpToJsObject($item['MENU']).', HOVER_CSS: \'bx-panel-admin-button-hover\'})</script>';
 				}
 				$result .= '</span></span>';
 				echo $result;
@@ -442,7 +442,7 @@ return;
 					if ($item['TOOLTIP_ID'])
 					{
 ?>
-<script type="text/javascript">BX.ready(function() {BX.hint(BX('<?=CUtil::JSEscape($id)?>'), '<?=CUtil::JSEscape($item["TITLE"])?>', '<?=CUtil::JSEscape($item['TOOLTIP'])?>', '<?=CUtil::JSEscape($item['TOOLTIP_ID'])?>')});</script>
+<script>BX.ready(function() {BX.hint(BX('<?=CUtil::JSEscape($id)?>'), '<?=CUtil::JSEscape($item["TITLE"])?>', '<?=CUtil::JSEscape($item['TOOLTIP'])?>', '<?=CUtil::JSEscape($item['TOOLTIP_ID'])?>')});</script>
 <?
 					}
 				}
@@ -459,14 +459,14 @@ return;
 	?>
 </div>
 
-<script type="text/javascript">BX.admin.panel.state = {fixed: <?=($aUserOpt["fix"] == "on" ? "true" : "false")?>}</script>
+<script>BX.admin.panel.state = {fixed: <?=($aUserOpt["fix"] == "on" ? "true" : "false")?>}</script>
 
 <?
 if($USER->IsAuthorized())
 {
 	//start menu preload
 	if($aUserOptGlobal["start_menu_preload"] == 'Y')
-		echo '<script type="text/javascript">jsUtils.addEvent(window, "load", function(){jsStartMenu.PreloadMenu();});</script>';
+		echo '<script>jsUtils.addEvent(window, "load", function(){jsStartMenu.PreloadMenu();});</script>';
 }
 
 echo $GLOBALS["adminPage"]->ShowSound();

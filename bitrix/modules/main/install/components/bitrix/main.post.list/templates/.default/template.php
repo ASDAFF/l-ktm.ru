@@ -20,7 +20,7 @@ ob_start();
 			<noindex>
 				<span class="feed-com-name feed-author-name feed-author-name-#AUTHOR_ID#">#AUTHOR_NAME#</span>
 				<a class="feed-com-name feed-author-name feed-author-name-#AUTHOR_ID#" id="bpc_#FULL_ID#" href="#AUTHOR_URL#">#AUTHOR_NAME#</a>
-				<script type="text/javascript">BX.tooltip('#AUTHOR_ID#', "bpc_#FULL_ID#", '<?=$ajax_page?>');</script>
+				<script>BX.tooltip('#AUTHOR_ID#', "bpc_#FULL_ID#", '<?=$ajax_page?>');</script>
 			</noindex>
 			<div class="feed-com-informers">
 				<span class="feed-time">#DATE#</span>
@@ -180,7 +180,7 @@ if (!empty($arParams["RECORDS"]))
 }
 ?><!--RCRDLIST_END_<?=$arParams["ENTITY_XML_ID"]?>-->
 <?if ($arParams["PREORDER"] == "Y"): ?><?=$arParams["NAV_STRING"]?><? endif; ?>
-<script type="text/javascript">
+<script>
 BX.ready(function(){
 	window["UC"]["<?=$arParams["ENTITY_XML_ID"]?>"] = new FCList({
 			ENTITY_XML_ID : '<?=$arParams["ENTITY_XML_ID"]?>',

@@ -651,7 +651,7 @@ function IBlockShowRights($entity_type, $iblock_id, $id, $section_title, $variab
 	?>
 	<tr>
 		<td colspan="2" align="center">
-			<script type="text/javascript">
+			<script>
 				BX.message({
 						langApplyTitle: '<?=CUtil::JSEscape(GetMessage("IBLOCK_AT_OVERWRITE_TIP"))?>',
 						langApply1Title: '<?=CUtil::JSEscape(GetMessage("IBLOCK_AT_OVERWRITE_1"))?>',

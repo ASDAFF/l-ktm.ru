@@ -121,7 +121,7 @@ require($_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/include/prolog_admin_af
 <input type="hidden" name="ID" value="<?echo $ID?>" />
 <input type="hidden" name="COPY_ID" value="<?echo $COPY_ID?>" />
 <input type="hidden" name="type" value="<?echo htmlspecialcharsbx($_REQUEST["type"])?>" />
-<script type="text/javascript" language="JavaScript">
+<script language="JavaScript">
 <!--
 var t=null;
 function PutString(str)

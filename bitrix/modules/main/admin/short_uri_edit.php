@@ -140,7 +140,7 @@ $tabControl->BeginNextTab();
 	<tr>
 		<td>&nbsp;</td>
 		<td><span id="id_short_uri_span"></span>
-			<script type="text/javascript">
+			<script>
 				function ShortUriChangeHandler(val)
 				{
 					var d = document.getElementById("id_short_uri_span");
