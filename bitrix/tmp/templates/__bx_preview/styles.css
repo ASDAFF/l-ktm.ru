@@ -1,0 +1,23 @@
+.red{color:red;}
+.green{color:green;}
+
+@font-face {
+font-family: 'HelveticaNeueCyr-Light';
+font-style: normal;
+font-weight: normal;
+src: local('HelveticaNeueCyr-Light'), url('fonts/HelveticaNeueCyr-Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'HelveticaNeueCyr-Roman';
+font-style: normal;
+font-weight: normal;
+src: local('HelveticaNeueCyr-Roman'), url('fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+}
+
+@font-face {
+font-family: 'HelveticaNeueCyr-UltraLight';
+font-style: normal;
+font-weight: normal;
+src: local('HelveticaNeueCyr-UltraLight'), url('fonts/HelveticaNeueCyr-UltraLight.woff') format('woff');
+}

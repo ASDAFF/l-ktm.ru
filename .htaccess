@@ -1,0 +1,192 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+Redirect 301 /catalog/kalsony_dlya_malchikov/ /catalog/shveynyy_trikotazh/
+Redirect 301 /statii/hlopok_dlya_trikotaja/ /statii/hlopok_dlya_trikotaj/
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  php_value display_errors 1
+  #php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://l-ktm.ru/$1 [L,R=301]
+
+  RewriteBase /
+  
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /catalog/nosochki/(.*)\ HTTP/
+  RewriteRule ^(.*)catalog/nosochki/(.*)$ /catalog/detskie-noski/$2 [L,R=301]
+  
+  Redirect 301 /catalog/white.php /catalog/white/
+  Redirect 301 /catalog/yellow.php /catalog/yellow/
+  Redirect 301 /catalog/black.php /catalog/black/
+  Redirect 301 /catalog/blue.php /catalog/blue/
+
+  #Redirect 301 /statii/uhod_za_trikotajem%3A_osnovnie_uslovnie_oboznacheniya/ /statii/uhod_za_trikotajem:_osnovnie_uslovnie_oboznacheniya/
+
+  #Redirect 301 l-ktm.ru/catalog/kolgotki_detskie_s_risunkom/?SHOWALL_1=0 http://l-ktm.ru/catalog/kolgotki_detskie_s_risunkom/
+  
+  #RewriteRule statii/uhod_za_trikotajem%3A_osnovnie_uslovnie_oboznacheniya/(.*) /statii/uhod_za_trikotajem:_osnovnie_uslovnie_oboznacheniya/$1 [R=301,L]
+  
+  #als+ redirect www.site.ru -> site.ru
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$
+  RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+  #als-
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteCond %{REQUEST_URI} !([\?\.]+)
+  # RewriteCond %{REQUEST_URI} !\.html$
+  # RewriteCond %{REQUEST_URI} !\.htm$
+  # RewriteCond %{REQUEST_URI} !\.php$
+  # RewriteCond %{REQUEST_URI} !\.jpg$
+  # RewriteCond %{REQUEST_URI} !\.png$
+  # RewriteCond %{REQUEST_URI} !\.gif$
+  # RewriteCond %{REQUEST_URI} !\.txt$
+  # RewriteCond %{REQUEST_URI} !\.xml$
+  RewriteRule ^(.*[^/])$ $1/ [L,R=301]  
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/(.*)$
+  RewriteRule (^|.*?/)index\.php$ http://%{HTTP_HOST}/$1 [R=302,QSA,L] 
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Задаем Expires заголовки (срок актуальности файла) (для лучшего кэширования)
+# ----------------------------------------------------------------------
+# Указываются заголовки с большим сроком "годности",
+# предполагается, что вы используете кэш на основе названий файлов (all.css?v001).
+# В дополнение, учтите, что старые прокси могут кэшировать не верно
+#   http://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# Если вы не используете названия файлов для контроля версий, измените кэш для CSS и JS, например на
+# "access plus 1 week".
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# Задаем значение по умолчанию (для всех файлов)
+  ExpiresDefault                          "access plus 1 month"
+
+# cache.appcache нельзя кэшировать в FF 3.6 (спасибо Remy ~Introducing HTML5)
+  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+# Ваш html документ
+  <FilesMatch \.(html|xhtml|xml|shtml|phtml|php|txt)$>
+    ExpiresDefault "access plus 0 seconds"
+  </FilesMatch>
+  ExpiresByType text/html                 "access plus 0 seconds"
+
+# Данные
+  ExpiresByType text/xml                  "access plus 0 seconds"
+  ExpiresByType application/xml           "access plus 0 seconds"
+  ExpiresByType application/json          "access plus 0 seconds"
+
+# Рассылка
+  ExpiresByType application/rss+xml       "access plus 1 hour"
+  ExpiresByType application/atom+xml      "access plus 1 hour"
+
+# Favicon (не может быть переименован)
+  <FilesMatch \.(ico)$>
+    ExpiresDefault "access plus 1 week"
+  </FilesMatch>
+  ExpiresByType image/x-icon              "access plus 1 week"
+
+# Медиа: изображения, видео, аудио
+  <FilesMatch \.(gif|png|jpg|jpeg|ogg|mp4|mkv|flv|swf|wmv|asf|asx|wma|wax|wmx|wm)$>
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  ExpiresByType image/gif                 "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 month"
+  ExpiresByType image/jpeg                "access plus 1 month"
+  ExpiresByType video/ogg                 "access plus 1 month"
+  ExpiresByType audio/ogg                 "access plus 1 month"
+  ExpiresByType video/mp4                 "access plus 1 month"
+  ExpiresByType video/webm                "access plus 1 month"
+
+# HTC файлы (css3pie)
+  ExpiresByType text/x-component          "access plus 1 month"
+
+# Веб-шрифты
+  <FilesMatch \.(eot|ttf|otf|svg|woff)$>
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  ExpiresByType application/x-font-ttf    "access plus 1 month"
+  ExpiresByType font/opentype             "access plus 1 month"
+  ExpiresByType application/x-font-woff   "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+
+# CSS и JavaScript
+  <FilesMatch \.(css|js)$>
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+
+# Статичные ресурсы
+  <FilesMatch \.(swf|pdf|doc|rtf|xls|ppt)$>
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  ExpiresByType application/x-shockwave-flash "access plus 1 year"
+  ExpiresByType application/pdf               "access plus 1 year"
+  ExpiresByType application/msword            "access plus 1 year"
+  ExpiresByType application/rtf               "access plus 1 year"
+  ExpiresByType application/vnd.ms-excel      "access plus 1 year"
+  ExpiresByType application/vnd.ms-powerpoint "access plus 1 year"
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Удаление ETag + Cache-Control
+# ----------------------------------------------------------------------
+# FileETag None бывает не достаточно (для некоторых серверов).
+<IfModule mod_headers.c>
+  Header unset ETag
+  # Так как мы посылаем expires заголовки с большим сроком,
+  # мы не используем ETag для статичного контента.
+  #   http://developer.yahoo.com/performance/rules.html#etags
+  FileETag None
+
+  ## Браузер должен обновлять документ после заданного в секундах времени, которое задается в Cache-Control.
+  <FilesMatch \.(html|xhtml|xml|shtml|phtml|php|txt)$>
+    Header set Cache-Control "max-age=0, private, must-revalidate"
+  </FilesMatch>
+  <FilesMatch \.(ico|gif|png|jpg|jpeg|ogg|mp4|mkv|flv|swf|wmv|asf|asx|wma|wax|wmx|wm)$>
+    Header set Cache-Control "max-age=31556926, public"
+  </FilesMatch>
+  <FilesMatch \.(eot|ttf|otf|svg|woff)$>
+    Header set Cache-Control "max-age=31556926, public"
+  </FilesMatch>
+  <FilesMatch \.(css|js)$>
+    Header set Cache-Control "max-age=31556926, public"
+  </FilesMatch>
+  <FilesMatch \.(swf|pdf|doc|rtf|xls|ppt)$>
+    Header set Cache-Control "max-age=31556926, public"
+  </FilesMatch>
+</IfModule>

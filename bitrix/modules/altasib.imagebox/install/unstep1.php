@@ -1,0 +1,21 @@
+<?
+#################################################
+#   Company developer: ALTASIB                  #
+#   Site: http://www.altasib.ru                 #
+#	Developer: Alexander Shipilov				#
+#   E-mail: dev@altasib.ru                      #
+#   Copyright (c) 2006-2011 ALTASIB             #
+#################################################
+?>
+<?
+IncludeModuleLangFile(__FILE__);
+?>
+<form action="<?echo $APPLICATION->GetCurPage()?>">
+        <?=bitrix_sessid_post()?>
+        <input type="hidden" name="lang" value="<?echo LANG?>">
+        <input type="hidden" name="id" value="altasib.imagebox">
+        <input type="hidden" name="uninstall" value="Y">
+        <input type="hidden" name="step" value="2">
+        <?echo CAdminMessage::ShowMessage(GetMessage("MOD_UNINST_WARN"))?>
+ 		<input type="submit" name="inst" value="<?echo GetMessage("MOD_UNINST_DEL")?>">
+</form>

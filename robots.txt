@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: /bitrix
+Allow: /bitrix/templates
+Allow: /bitrix/js
+Allow: /bitrix/compon
+Allow: /bitrix/cache/
+Disallow: /view
+Disallow: /gallery
+Disallow: /produkt
+Disallow: /*HUU
+Disallow: /company
+Disallow: /*PAGEN_
+Disallow: /dev_section
+Clean-Param: SHOWALL_1&success&bitrix_include_areas&clear_cache&back_url_admin
+Host: https://l-ktm.ru
+Sitemap: https://l-ktm.ru/sitemap.xml

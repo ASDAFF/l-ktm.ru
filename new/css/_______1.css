@@ -1,0 +1,105 @@
+.version.________1 /* version checker */
+{
+	color: #0000EB;
+	background-color: #40A537;
+}
+
+.html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 500px;
+	background-image: none;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#u14282
+{
+	z-index: 11;
+	width: 156px;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 20px;
+	left: -91px;
+}
+
+#pu14153
+{
+	width: 0.01px;
+	margin-bottom: -36px;
+	margin-right: -10000px;
+	margin-left: -100px;
+}
+
+#u14153
+{
+	z-index: 2;
+	min-height: 505px;
+	padding-bottom: 31px;
+	background: #FFFFFF url("../images/winter-bokeh-background_lg.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+#u14153_align_to_page
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+	left: -100px;
+}
+
+#u14154
+{
+	z-index: 3;
+	width: 795px;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 226px;
+	left: 182px;
+}
+
+#u14153-bw
+{
+	z-index: 2;
+	min-height: 505px;
+}
+
+#u14157-6
+{
+	z-index: 5;
+	width: 933px;
+	min-height: 147px;
+	background-color: transparent;
+	text-align: center;
+	font-size: 39px;
+	color: #000000;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 79px;
+	left: 113px;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-bottom: 36px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
