@@ -201,7 +201,7 @@ if ($bShowStat || $bShowCacheStat) //2
 	if (!empty($arCacheDebug))
 	{
 		?>
-		<script type="text/javascript">
+		<script>
 			function sortTable(table_id, column_num, reverse)
 			{
 				var table = BX(table_id);
@@ -314,7 +314,7 @@ if ($bShowStat || $bShowCacheStat) //2
 	foreach($APPLICATION->arIncludeDebug as $i=>$arIncludeDebug)
 	{
 		?>
-		<script type="text/javascript">
+		<script>
 			BX_DEBUG_INFO_<?=$i?> = new BX.CDebugDialog();
 		</script>
 		<?
@@ -430,7 +430,7 @@ if ($bShowStat || $bShowCacheStat) //2
 
 		/*************************************CACHE*********************************************/
 		?>
-		<script type="text/javascript">
+		<script>
 			BX_DEBUG_INFO_CACHE_<?=$i?> = new BX.CDebugDialog();
 		</script>
 		<?
@@ -507,7 +507,7 @@ if($bShowExtTime)
 	$obJSPopup = new CJSPopupOnPage();
 	$obJSPopup->jsPopup = 'jsDebugTimeWindow';
 ?>
-<script type="text/javascript">
+<script>
 var jsDebugTimeWindow = new BX.CDebugDialog();
 </script>
 <div id="BX_DEBUG_TIME" class="bx-debug-window" style="z-index:99; width:660px !important;">

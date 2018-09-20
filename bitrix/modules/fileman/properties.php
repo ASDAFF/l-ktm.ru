@@ -160,7 +160,7 @@ class CIBlockPropertyMapGoogle extends CIBlockPropertyMapInterface
 
 //http://jabber.bx/view.php?id=17908
 ?>
-<script type="text/javascript">
+<script>
 BX.ready(function(){
 	var tabArea = BX.findParent(BX("BX_GMAP_<?=$MAP_ID?>"),{className:"adm-detail-content"});
 	var tabButton = BX("tab_cont_"+tabArea.id);
@@ -170,7 +170,7 @@ BX.ready(function(){
 
 <div id="bx_address_search_control_<?echo $MAP_ID?>" style="display: none;"><?echo GetMessage('IBLOCK_PROP_MAP_GOOGLE_SEARCH')?><input type="text" name="bx_address_<?echo $MAP_ID?>" id="bx_address_<?echo $MAP_ID?>" value="" style="width: 300px;" autocomplete="off" /></div>
 <input type="hidden" id="value_<?echo $MAP_ID;?>" name="<?=htmlspecialcharsbx($strHTMLControlName["VALUE"])?>" value="<?=htmlspecialcharsEx($value["VALUE"])?>" />
-<script type="text/javascript">
+<script>
 window.jsAdminGoogleMess = {
 	nothing_found: '<?echo CUtil::JSEscape(GetMessage('IBLOCK_PROP_MAP_GOOGLE_NOTHING_FOUND'))?>'
 }
@@ -555,7 +555,7 @@ class CIBlockPropertyMapYandex extends CIBlockPropertyMapInterface
 <?
 		echo EndNote();
 ?>
-<script type="text/javascript">
+<script>
 function setYandexKey(domain, input)
 {
 	LoadMap_<?echo $MAP_ID?>(document.getElementById(input).value);
@@ -657,7 +657,7 @@ function saveYandexKey(domain, input)
 
 //http://jabber.bx/view.php?id=17908
 ?>
-<script type="text/javascript">
+<script>
 BX.ready(function(){
 	var tabArea = BX.findParent(BX("BX_YMAP_<?=$MAP_ID?>"),{className:"adm-detail-content"});
 	var tabButton = BX("tab_cont_"+tabArea.id);
@@ -667,7 +667,7 @@ BX.ready(function(){
 
 <div id="bx_address_search_control_<?echo $MAP_ID?>" style="display: none;"><?echo GetMessage('IBLOCK_PROP_MAP_YANDEX_SEARCH')?><input type="text" name="bx_address_<?echo $MAP_ID?>" id="bx_address_<?echo $MAP_ID?>" value="" style="width: 300px;" autocomplete="off" /></div>
 <input type="hidden" id="value_<?echo $MAP_ID;?>" name="<?=htmlspecialcharsbx($strHTMLControlName["VALUE"])?>" value="<?=htmlspecialcharsEx($value["VALUE"])?>" />
-<script type="text/javascript">
+<script>
 window.jsAdminYandexMess = {
 	nothing_found: '<?echo CUtil::JSEscape(GetMessage('IBLOCK_PROP_MAP_YANDEX_NOTHING_FOUND'))?>'
 }

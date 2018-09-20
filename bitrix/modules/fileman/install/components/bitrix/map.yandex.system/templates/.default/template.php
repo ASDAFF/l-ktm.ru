@@ -1,7 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 ?>
-<script type="text/javascript">
+<script>
 if (!window.GLOBAL_arMapObjects)
 	window.GLOBAL_arMapObjects = {};
 

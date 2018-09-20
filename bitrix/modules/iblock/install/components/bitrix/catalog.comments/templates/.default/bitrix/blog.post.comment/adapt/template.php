@@ -1,6 +1,6 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 CJSCore::Init(array("image"));?>
-<script type="text/javascript">
+<script>
 BX.ready( function(){
 	if(BX.viewImageBind)
 	{

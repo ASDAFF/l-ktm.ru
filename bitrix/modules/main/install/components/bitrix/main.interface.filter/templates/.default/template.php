@@ -152,7 +152,7 @@ $APPLICATION->IncludeComponent(
 	$component,
 	array("HIDE_ICONS"=>true)
 );?></span>
-<script type="text/javascript">
+<script>
 BX.ready(function(){bxGrid_<?=$arParams["GRID_ID"]?>.OnDateChange(document.forms['filter_<?=$arParams["GRID_ID"]?>'].<?=$field["id"]?>_datesel)});
 </script>
 <?

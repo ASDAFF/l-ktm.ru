@@ -772,10 +772,10 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод по коду документа возвращает ссылку на страницу документа в административной части.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 	*
-	* @param string $documentId - код документа.
-	* @return string - ссылка на страницу документа в административной части.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	* @return string - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function GetDocumentAdminPage($documentId)
 	{
@@ -805,10 +805,10 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод возвращает свойства (поля) документа в виде ассоциативного массива вида array(код_свойства => значение, ...). Определены все свойства, которые возвращает метод GetDocumentFields.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ array(пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ => пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, ...). пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ GetDocumentFields.
 	*
-	* @param string $documentId - код документа.
-	* @return array - массив свойств документа.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	* @return array - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function GetDocument($documentId)
 	{
@@ -1866,10 +1866,10 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод создает новый документ с указанными свойствами (полями).
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ).
 	*
-	* @param array $arFields - массив значений свойств документа в виде array(код_свойства => значение, ...). Коды свойств соответствуют кодам свойств, возвращаемым методом GetDocumentFields.
-	* @return int - код созданного документа.
+	* @param array $arFields - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ array(пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ => пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, ...). пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ GetDocumentFields.
+	* @return int - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function CreateDocument($parentDocumentId, $arFields)
 	{
@@ -1965,9 +1965,9 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод удаляет указанный документ.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*
-	* @param string $documentId - код документа.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function DeleteDocument($documentId)
 	{
@@ -1979,9 +1979,9 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод публикует документ. То есть делает его доступным в публичной части сайта.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 	*
-	* @param string $documentId - код документа.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function PublishDocument($documentId)
 	{
@@ -2023,8 +2023,8 @@ class CIBlockDocument
 			$PARENT_ID = intval($ar_element["WF_PARENT_ELEMENT_ID"]);
 			if($PARENT_ID)
 			{
-				// TODO: Если в документе $documentId поле WF_PARENT_ELEMENT_ID не NULL, то при публикации нужно перенести данные
-				// (скопировать документ) из документа $documentId в документ WF_PARENT_ELEMENT_ID,
+				// TODO: пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $documentId пїЅпїЅпїЅпїЅ WF_PARENT_ELEMENT_ID пїЅпїЅ NULL, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+				// (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ) пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $documentId пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ WF_PARENT_ELEMENT_ID,
 				$obElement = new CIBlockElement;
 				$ar_element["WF_PARENT_ELEMENT_ID"] = false;
 
@@ -2086,14 +2086,14 @@ class CIBlockDocument
 				}
 
 				$obElement->Update($PARENT_ID, $ar_element);
-				// вызвать CBPDocument::MergeDocuments(WF_PARENT_ELEMENT_ID, $documentId) для переноса состояний и истории БП,
+				// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ CBPDocument::MergeDocuments(WF_PARENT_ELEMENT_ID, $documentId) пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ,
 				CBPDocument::MergeDocuments(
 					array("iblock", "CIBlockDocument", $PARENT_ID),
 					array("iblock", "CIBlockDocument", $documentId)
 				);
-				// грохнуть документ $documentId,
+				// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $documentId,
 				CIBlockElement::Delete($ID);
-				// опубликовать документ WF_PARENT_ELEMENT_ID
+				// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ WF_PARENT_ELEMENT_ID
 				CIBlockElement::WF_CleanUpHistoryCopies($PARENT_ID, 0);
 				$strSql = "update b_iblock_element set WF_STATUS_ID='1', WF_NEW=NULL WHERE ID=".$PARENT_ID." AND WF_PARENT_ELEMENT_ID IS NULL";
 				$DB->Query($strSql, false, "FILE: ".__FILE__."<br>LINE: ".__LINE__);
@@ -2102,7 +2102,7 @@ class CIBlockDocument
 			}
 			else
 			{
-				// Если WF_PARENT_ELEMENT_ID равно NULL, то все как раньше.
+				// пїЅпїЅпїЅпїЅ WF_PARENT_ELEMENT_ID пїЅпїЅпїЅпїЅпїЅ NULL, пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
 				CIBlockElement::WF_CleanUpHistoryCopies($ID, 0);
 				$strSql = "update b_iblock_element set WF_STATUS_ID='1', WF_NEW=NULL WHERE ID=".$ID." AND WF_PARENT_ELEMENT_ID IS NULL";
 				$DB->Query($strSql, false, "FILE: ".__FILE__."<br>LINE: ".__LINE__);
@@ -2236,9 +2236,9 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод снимает документ с публикации. То есть делает его недоступным в публичной части сайта.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 	*
-	* @param string $documentId - код документа.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function UnpublishDocument($documentId)
 	{
@@ -2249,7 +2249,7 @@ class CIBlockDocument
 		CIBlockElement::UpdateSearch($documentId);
 	}
 
-	// array("read" => "Ета чтение", "write" => "Ета запысь")
+	// array("read" => "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "write" => "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")
 	public function GetAllowableOperations($documentType)
 	{
 		$iblockId = intval(substr($documentType, strlen("iblock_")));
@@ -2354,7 +2354,7 @@ class CIBlockDocument
 			$result .= '<textarea id="WFSFormOptionsX" rows="5" cols="30">'.htmlspecialcharsbx($str).'</textarea><br />';
 			$result .= GetMessage("IBD_DOCUMENT_XFORMOPTIONS1").'<br />';
 			$result .= GetMessage("IBD_DOCUMENT_XFORMOPTIONS2").'<br />';
-			$result .= '<script type="text/javascript">
+			$result .= '<script>
 				function WFSFormOptionsXFunction()
 				{
 					var result = {};
@@ -2392,7 +2392,7 @@ class CIBlockDocument
 		return $result;
 	}
 
-	// array("1" => "Админы", 2 => "Гости", 3 => ..., "Author" => "Афтар")
+	// array("1" => "пїЅпїЅпїЅпїЅпїЅпїЅ", 2 => "пїЅпїЅпїЅпїЅпїЅ", 3 => ..., "Author" => "пїЅпїЅпїЅпїЅпїЅ")
 	public function GetAllowableUserGroups($documentType)
 	{
 		$documentType = trim($documentType);
@@ -2515,10 +2515,10 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод возвращает массив произвольной структуры, содержащий всю информацию о документе. По этому массиву документ восстановливается методом RecoverDocumentFromHistory.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ RecoverDocumentFromHistory.
 	*
-	* @param string $documentId - код документа.
-	* @return array - массив документа.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	* @return array - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function GetDocumentForHistory($documentId, $historyIndex)
 	{
@@ -2598,10 +2598,10 @@ class CIBlockDocument
 	}
 
 	/**
-	* Метод восстанавливает указанный документ из массива. Массив создается методом RecoverDocumentFromHistory.
+	* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ RecoverDocumentFromHistory.
 	*
-	* @param string $documentId - код документа.
-	* @param array $arDocument - массив.
+	* @param string $documentId - пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	* @param array $arDocument - пїЅпїЅпїЅпїЅпїЅпїЅ.
 	*/
 	public function RecoverDocumentFromHistory($documentId, $arDocument)
 	{

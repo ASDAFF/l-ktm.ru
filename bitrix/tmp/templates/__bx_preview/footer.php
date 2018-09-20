@@ -1,55 +1,55 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
-						<div id='upbutton'>Вверх</div>
+						<div id='upbutton'>пїЅпїЅпїЅпїЅпїЅ</div>
 					</div>
 					<div class="clearing">&nbsp;</div>
 				</div>
 				<div id="bottom">
 					<!-- Yandex.Share -->
-						<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+						<script src="//yandex.st/share/share.js"></script>
 						<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div> 
 					<!-- /Yandex.Share -->
 					<div id="footer_menu">
 						<div class="left_foot_menu">
 							<?$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu", Array(
-								"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-								"MENU_CACHE_TYPE" => "A",	// Тип кеширования
-								"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-								"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-								"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-								"MAX_LEVEL" => "1",	// Уровень вложенности меню
-								"CHILD_MENU_TYPE" => "top",	// Тип меню для остальных уровней
-								"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-								"DELAY" => "N",	// Откладывать выполнение шаблона меню
-								"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+								"ROOT_MENU_TYPE" => "top",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_TYPE" => "A",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_TIME" => "3600",	// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ.)
+								"MENU_CACHE_USE_GROUPS" => "Y",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_GET_VARS" => "",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MAX_LEVEL" => "1",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+								"CHILD_MENU_TYPE" => "top",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"USE_EXT" => "N",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ .пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅ.menu_ext.php
+								"DELAY" => "N",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+								"ALLOW_MULTI_SELECT" => "N",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 								),
 								false
 							);?>
 						</div>
 						<!--div class="catalog_foot_menu">
-							<div class="title_catalog_menu">Каталог</div>
+							<div class="title_catalog_menu">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>
 							<!--?$APPLICATION->IncludeComponent("bitrix:menu", "footer_catalog_menu", Array(
-								"ROOT_MENU_TYPE" => "footer",	// Тип меню для первого уровня
-								"MENU_CACHE_TYPE" => "A",	// Тип кеширования
-								"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-								"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-								"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-								"MAX_LEVEL" => "1",	// Уровень вложенности меню
-								"CHILD_MENU_TYPE" => "footer",	// Тип меню для остальных уровней
-								"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-								"DELAY" => "N",	// Откладывать выполнение шаблона меню
-								"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+								"ROOT_MENU_TYPE" => "footer",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_TYPE" => "A",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_TIME" => "3600",	// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ.)
+								"MENU_CACHE_USE_GROUPS" => "Y",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MENU_CACHE_GET_VARS" => "",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"MAX_LEVEL" => "1",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+								"CHILD_MENU_TYPE" => "footer",	// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+								"USE_EXT" => "Y",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ .пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅ.menu_ext.php
+								"DELAY" => "N",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+								"ALLOW_MULTI_SELECT" => "N",	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 								),
 								false
 							);?-->
 						</div-->
 					</div>
 					<div style="margin-top: 5px; float: right; line-height:18px;">
-						2010-<?=date("Y")?> &copy; "Лукоморье" <br/>Все права защищены. <br/>
-						Звоните: <?$APPLICATION->IncludeFile("/include_areas/phone.php", Array(), Array());?> <br/>
-						Пишите: <?$APPLICATION->IncludeFile("/include_areas/email.php", Array(), Array());?>
+						2010-<?=date("Y")?> &copy; "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" <br/>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. <br/>
+						пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: <?$APPLICATION->IncludeFile("/include_areas/phone.php", Array(), Array());?> <br/>
+						пїЅпїЅпїЅпїЅпїЅпїЅ: <?$APPLICATION->IncludeFile("/include_areas/email.php", Array(), Array());?>
 					</div><?/*
 					<!--LiveInternet counter-->
-						<script type="text/javascript">
+						<script>
 							<!--
 							document.write("<a href='http://www.liveinternet.ru/click' "+
 							"target=_blank><img src='http://counter.yadro.ru/hit?t21.15;r"+
@@ -57,26 +57,26 @@
 							";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
 							screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 							";h"+escape(document.title.substring(0,80))+";"+Math.random()+
-							"' alt='' title='LiveInternet: показано число просмотров за 24"+
-							" часа, посетителей за 24 часа и за сегодня' "+
+							"' alt='' title='LiveInternet: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 24"+
+							" пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 24 пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ' "+
 							"border='0' width='0' height='0'><\/a>")
 							//-->
 						</script>
 					<!--/LiveInternet-->
 					*/?>
-					<!--LiveInternet counter--><script type="text/javascript"><!--
+					<!--LiveInternet counter--><script><!--
 					document.write("<a href='//www.liveinternet.ru/click' "+
 					"target=_blank><img src='//counter.yadro.ru/hit?t52.6;r"+
 					escape(document.referrer)+((typeof(screen)=="undefined")?"":
 					";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
 					screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 					";"+Math.random()+
-					"' alt='' title='LiveInternet: показано число просмотров и"+
-					" посетителей за 24 часа' "+
+					"' alt='' title='LiveInternet: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ"+
+					" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 24 пїЅпїЅпїЅпїЅ' "+
 					"border='0' width='88' height='31'><\/a>")
 					//--></script><!--/LiveInternet-->
 					<!-- Yandex.Metrika counter -->
-					<script type="text/javascript">
+					<script>
 						(function (d, w, c) {
 								(w[c] = w[c] || []).push(function() {
 									try {
@@ -120,7 +120,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
+		<script>
 			$(document).ready(function(){
 				$(window).scroll(function(){
 					if($(this).scrollTop()> 300 ){

@@ -1327,7 +1327,7 @@ STYLES;
 </table>
 {#FORM_END#}
 
-<script type="text/javascript">
+<script>
 
 function WizardAutoSubmit()
 {
@@ -1471,7 +1471,7 @@ class CWizardAdminTemplate extends CWizardTemplate
 				$strError = '<div id="step_error">'.$strError."</div>";
 
 			$strJsError = '
-			<script type="text/javascript">
+			<script>
 				ShowWarnings(['.$strJsError.']);
 			</script>';
 		}
@@ -1652,7 +1652,7 @@ class CWizardAdminTemplate extends CWizardTemplate
 
 		{$adminScript}
 
-		<script type="text/javascript">
+		<script>
 
 			top.BX.message({"ADMIN_WIZARD_EXIT_ALERT" : "{$alertText}"});
 

@@ -199,7 +199,7 @@ class CSocServLiveIDOAuth extends CSocServAuth
 		$location = ($mode == "opener") ? 'if(window.opener) window.opener.location = \''.$url.'\'; window.close();' : ' window.location = \''.$url.'\';';
 
 		$JSScript = '
-		<script type="text/javascript">
+		<script>
 		'.$location.'
 		</script>
 		';

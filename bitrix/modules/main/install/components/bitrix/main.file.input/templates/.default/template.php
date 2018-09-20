@@ -17,7 +17,7 @@ $js_id = CUtil::JSEscape($arParams['CONTROL_ID']);
 	</div>
 <?endif;?>
 </div>
-<script type="text/javascript">
+<script>
 BX.message({MFI_CONFIRM: '<?=CUtil::JSEscape(GetMessage('MFI_CONFIRM'))?>'});
 window.FILE_INPUT_<?=$js_id?> = new BX.CFileInput('<?=$js_id;?>', '<?=CUtil::JSEscape($arParams['INPUT_NAME'])?>', '<?=$arResult['CONTROL_UID']?>', '<?=CUtil::JSEscape(htmlspecialcharsback(POST_FORM_ACTION_URI))?>', <?=$arParams['MULTIPLE'] == 'N' ? 'false' : 'true'?>);
 <?

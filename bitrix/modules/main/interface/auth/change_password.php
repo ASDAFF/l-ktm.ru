@@ -37,7 +37,7 @@ $login = (strlen($USER_LOGIN)>0) ? $USER_LOGIN : $last_login;
 	</div>
 </div>
 
-<script type="text/javascript">
+<script>
 BX.message({
 	'AUTH_NEW_PASSWORD_CONFIRM_WRONG':'<?=GetMessageJS('AUTH_NEW_PASSWORD_CONFIRM_WRONG')?>'
 });

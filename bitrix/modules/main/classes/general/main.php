@@ -952,7 +952,7 @@ abstract class CAllMain
 
 		if($this->bInAjax && !empty($arTmpCss))
 		{
-			$res .= '<script type="text/javascript">'."BX.loadCSS(['".implode("','", $arTmpCss)."']);".'</script>';
+			$res .= '<script>'."BX.loadCSS(['".implode("','", $arTmpCss)."']);".'</script>';
 		}
 
 		return $res;
@@ -1256,14 +1256,14 @@ abstract class CAllMain
 			{
 				if($writeResult || (!$writeResult && $unique && $upOptim == 'UP'))
 				{
-					$res .= '<script type="text/javascript" src="'.CUtil::GetAdditionalFileURL($optimFName).'"></script>'."\n";
+					$res .= '<script src="'.CUtil::GetAdditionalFileURL($optimFName).'"></script>'."\n";
 				}
 
 				if(!$writeResult)
 				{
 					foreach ($arFile as $key => $src)
 					{
-						$res .= '<script type="text/javascript" src="'.$arSrcFile[$key].'"></script>'."\n";
+						$res .= '<script src="'.$arSrcFile[$key].'"></script>'."\n";
 					}
 				}
 			}
@@ -1803,7 +1803,7 @@ abstract class CAllMain
 				$bExternalLink = self::IsExternalLink($src);
 				if($bExternalLink)
 				{
-					$arJS['KERNEL'] .= '<script type="text/javascript" src="'.$src.'"></script>'."\n";
+					$arJS['KERNEL'] .= '<script src="'.$src.'"></script>'."\n";
 					continue;
 				}
 				else
@@ -1859,11 +1859,11 @@ abstract class CAllMain
 									$arSrcBxFile[$moduleInfo['MODULE_ID']] = array();
 								}
 
-								$arSrcBxNoKernel[$moduleInfo['MODULE_ID']] .= '<script type="text/javascript" src="'.$src.'"></script>'."\n";
+								$arSrcBxNoKernel[$moduleInfo['MODULE_ID']] .= '<script src="'.$src.'"></script>'."\n";
 							}
 							else
 							{
-								$this->AddAdditionalJS('<script type="text/javascript" src="'.$src.'"></script>');
+								$this->AddAdditionalJS('<script src="'.$src.'"></script>');
 							}
 						}
 					}
@@ -1872,7 +1872,7 @@ abstract class CAllMain
 				{
 					if(strncmp($src, '/bitrix/js/', 11) != 0)
 					{
-						$arJS['PAGE'] .= '<script type="text/javascript" src="'.$src.'"></script>'."\n";
+						$arJS['PAGE'] .= '<script src="'.$src.'"></script>'."\n";
 					}
 					else
 					{
@@ -1881,11 +1881,11 @@ abstract class CAllMain
 							&& ($moduleInfo = $this->IsKernelJS($src))
 							&& $moduleInfo['BODY'])
 						{
-							$arJS['BODY'] .= '<script type="text/javascript" src="'.$src.'"></script>'."\n";
+							$arJS['BODY'] .= '<script src="'.$src.'"></script>'."\n";
 						}
 						else
 						{
-								$arJS['KERNEL'] .= '<script type="text/javascript" src="'.$src.'"></script>'."\n";
+								$arJS['KERNEL'] .= '<script src="'.$src.'"></script>'."\n";
 						}
 					}
 				}
@@ -1893,7 +1893,7 @@ abstract class CAllMain
 
 			if(!empty($this->arLangJS))
 			{
-				$arJS['LANG'] .= "<script type=\"text/javascript\">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>\n";
+				$arJS['LANG'] .= "<script>if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>\n";
 				$arJS['LANG'] .= $this->GetLangJS();
 			}
 
@@ -1915,11 +1915,11 @@ abstract class CAllMain
 
 				if(!empty($this->sCssJsFList['CSS']))
 				{
-					$arJS['KERNEL'] .= '<script type="text/javascript">'."BX.setCSSList(['".implode("','", $this->sCssJsFList['CSS'])."']); </script>\n";
+					$arJS['KERNEL'] .= '<script>'."BX.setCSSList(['".implode("','", $this->sCssJsFList['CSS'])."']); </script>\n";
 				}
 				if(!empty($this->sCssJsFList['JS']))
 				{
-					$arJS['KERNEL'] .= '<script type="text/javascript">'."BX.setJSList(['".implode("','", $this->sCssJsFList['JS'])."']); </script>\n";
+					$arJS['KERNEL'] .= '<script>'."BX.setJSList(['".implode("','", $this->sCssJsFList['JS'])."']); </script>\n";
 				}
 
 				foreach($arBxBodyFile as $moduleID => $arJsFiles)
@@ -4608,7 +4608,7 @@ abstract class CAllMain
 
 			CUtil::InitJSCore(array('ajax'));
 
-			$jsMsg = '<script type="text/javascript">'."\n".
+			$jsMsg = '<script>'."\n".
 				($bShowMess? 'bxSession.mess.messSessExpired = \''.CUtil::JSEscape(GetMessage("MAIN_SESS_MESS", array("#TIMEOUT#"=>round($sessTimeout/60)))).'\';'."\n" : '').
 				'bxSession.Expand('.$sessTimeout.', \''.bitrix_sessid().'\', '.($bShowMess? 'true':'false').', \''.$key.'\');'."\n".
 				'</script>';

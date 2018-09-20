@@ -44,7 +44,7 @@ class CAdminPage
 			$APPLICATION->GetCSSArray()
 		);
 
-		$s = '<script type="text/javascript" bxrunfirst>'."\n";
+		$s = '<script bxrunfirst>'."\n";
 		for ($i = 0, $cnt = count($arCSS); $i < $cnt; $i++)
 		{
 			$bExternalLink = (strncmp($arCSS[$i], 'http://', 7) == 0 || strncmp($arCSS[$i], 'https://', 8) == 0);
@@ -258,7 +258,7 @@ var phpVars = {
 				ob_end_clean();
 
 				$res = '
-<script type="text/javascript" src="'.CUtil::GetAdditionalFileURL('/bitrix/components/bitrix/player/mediaplayer/flvscript.js', true).'"></script>
+<script src="'.CUtil::GetAdditionalFileURL('/bitrix/components/bitrix/player/mediaplayer/flvscript.js', true).'"></script>
 <div style="position:absolute; top:-1000px; left:-1000px;">
 '.$res.'
 </div>
@@ -868,7 +868,7 @@ class CAdminMenu
 						$menuScripts .= $this->Show($submenu, $level);
 					}
 					if ($menuScripts != "")
-						echo '<script type="text/javascript">'.$menuScripts.'</script>';
+						echo '<script>'.$menuScripts.'</script>';
 				}
 				elseif($mode == "icon")
 					$this->ShowIcons($aMenu);
@@ -1781,7 +1781,7 @@ class CAdminFilter
 		}
 
 		echo '
-<script type="text/javascript">
+<script>
 		var '.$this->id.' = {};
 		BX.ready(function(){
 			'.$this->id.' = new BX.AdminFilter("'.$this->id.'", ['.$sRowIds.']);
@@ -2021,7 +2021,7 @@ class CAdminContextMenu
 	{
 		$id = 'context_right_'.RandString(8);
 ?>
-<script type="text/javascript">BX.ready(function(){
+<script>BX.ready(function(){
 var right_bar = BX('<?=$id?>');
 BX.Fix(right_bar, {type: 'right', limit_node: BX.previousSibling(right_bar)});
 })</script>
@@ -2469,7 +2469,7 @@ class CAdminTabControl
 		else
 		{
 			echo '
-<script type="text/javascript">
+<script>
 '.$this->publicObject.'.SetHead(\''.CUtil::JSEscape($tabs_html).'\');
 ';
 			if ($this->AUTOSAVE)
@@ -2607,14 +2607,14 @@ echo '
 				{
 					echo '
 <input type="hidden" name="bxpublic" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons('.CUtil::PhpToJsObject($aParams['buttons']).');</script>
+<script>'.$this->publicObject.'.SetButtons('.CUtil::PhpToJsObject($aParams['buttons']).');</script>
 ';
 				}
 				else
 				{
 					echo '
 <input type="hidden" name="bxpublic" value="Y" /><input type="hidden" name="save" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
+<script>'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
 ';
 				}
 			}
@@ -2661,7 +2661,7 @@ echo '
 			{
 				echo '
 <input type="hidden" name="bxpublic" value="Y" /><input type="hidden" name="save" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
+<script>'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
 ';
 			}
 			elseif (is_array($arJSButtons))
@@ -2669,7 +2669,7 @@ echo '
 				$arJSButtons = array_values($arJSButtons);
 				echo '
 <input type="hidden" name="bxpublic" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons([
+<script>'.$this->publicObject.'.SetButtons([
 ';
 				foreach ($arJSButtons as $key => $btn)
 				{
@@ -2717,7 +2717,7 @@ echo '
 
 <input type="hidden" id="'.$this->name.'_active_tab" name="'.$this->name.'_active_tab" value="'.htmlspecialcharsbx($this->selectedTab).'">
 
-<script type="text/javascript">';
+<script>';
 		$s = "";
 		foreach($this->tabs as $tab)
 		{
@@ -2770,7 +2770,7 @@ echo '
 		if ($this->bPublicModeBuffer)
 		{
 			echo '</div>';
-			echo '<script type="text/javascript">BX.ready(function() {'.$this->publicObject.'.SwapContent(\''.$this->publicModeBuffer_id.'\');});</script>';
+			echo '<script>BX.ready(function() {'.$this->publicObject.'.SwapContent(\''.$this->publicModeBuffer_id.'\');});</script>';
 		}
 	}
 
@@ -2870,7 +2870,7 @@ echo '</div>';
 	{
 		$this->EndTab();
 		echo '
-<script type="text/javascript">
+<script>
 ';
 		$s = "";
 		foreach($this->tabs as $tab)
@@ -3662,7 +3662,7 @@ class CAdminList
 
 		$tbl = CUtil::JSEscape($this->table_id);
 ?>
-<script type="text/javascript">
+<script>
 window['<?=$tbl?>'] = new BX.adminList('<?=$tbl?>', <?=CUtil::PhpToJsObject($arParams)?>);
 BX.adminChain.addItems("<?=$tbl?>_navchain_div");
 </script>
@@ -3761,7 +3761,7 @@ BX.adminChain.addItems("<?=$tbl?>_navchain_div");
 			if($_REQUEST["mode"]=='frame')
 			{
 ?>
-<html><head></head><body><?=$string?><script type="text/javascript">
+<html><head></head><body><?=$string?><script>
 top.bxcompajaxframeonload = function() {
 	top.BX.adminPanel.closeWait();
 	top.<?=$this->table_id?>.Destroy(false);
@@ -3782,7 +3782,7 @@ top.BX.ajax.UpdatePageData({});
 			{
 				if(isset($this->onLoadScript)):
 ?>
-<script type="text/javascript"><?=$this->onLoadScript?></script>
+<script><?=$this->onLoadScript?></script>
 <?
 				endif;
 
@@ -4378,7 +4378,7 @@ class CAdminChain
 		if ($chainScripts != '')
 		{
 ?>
-<script type="text/javascript"><?=$chainScripts?></script>
+<script><?=$chainScripts?></script>
 <?
 		}
 
@@ -4569,7 +4569,7 @@ class CAdminCalendar
 			'<input type="text" class="adm-input adm-calendar-to" id="'.$sToName.'_calendar_to" name="'.$sToName.'" size="'.($size+5).'" value="'.htmlspecialcharsbx($sToVal).'">'.
 			'<span class="adm-calendar-icon" title="'.GetMessage("admin_lib_calend_title").'" onclick="BX.calendar({node:this, field:\''.$sToName.'\', form: \'\', bTime: '.($bTime ? 'true' : 'false').', bHideTime: false});"></span>'.
 		'</div>'.
-		'<script type="text/javascript">
+		'<script>
 			window["'.$sFromName.'_bTime"] = '.($bTime ? "true" : "false").';';
 
 		if($bSelectShow)
@@ -4849,7 +4849,7 @@ class CJSPopup
 		if ($title == '')
 			$title = $this->title;
 ?>
-<script type="text/javascript">top.<?=$this->jsPopup?>.SetTitle('<?echo CUtil::JSEscape($title)?>');</script>
+<script>top.<?=$this->jsPopup?>.SetTitle('<?echo CUtil::JSEscape($title)?>');</script>
 <?
 	}
 
@@ -4859,7 +4859,7 @@ class CJSPopup
 
 		$this->bDescriptionStarted = true;
 ?>
-<script type="text/javascript"><?if ($icon):?>
+<script><?if ($icon):?>
 	<?if (strpos($icon, '/') === false):?>
 
 		<?=$this->jsPopup?>.SetIcon('<?echo CUtil::JSEscape($icon)?>');
@@ -4921,12 +4921,12 @@ class CJSPopup
 
 			if ($this->bContentBuffered)
 			{
-?></div><script type="text/javascript">BX.ready(function() {<?=$this->jsPopup?>.SwapContent(BX('<?echo $this->cont_id?>'))});</script><?
+?></div><script>BX.ready(function() {<?=$this->jsPopup?>.SwapContent(BX('<?echo $this->cont_id?>'))});</script><?
 			}
 
 			if (!defined('BX_PUBLIC_MODE') || BX_PUBLIC_MODE == false)
 			{
-?><script type="text/javascript"><?echo "BX.adminFormTools.modifyFormElements(".$this->jsPopup.".DIV);"?></script><?
+?><script><?echo "BX.adminFormTools.modifyFormElements(".$this->jsPopup.".DIV);"?></script><?
 			}
 
 			$this->bContentStarted = false;
@@ -4952,7 +4952,7 @@ class CJSPopup
 			$buttons = ob_get_contents();
 			ob_end_clean();
 ?>
-		<script type="text/javascript"><?=$this->jsPopup?>.SetButtons('<?echo CUtil::JSEscape($buttons)?>');</script>
+		<script><?=$this->jsPopup?>.SetButtons('<?echo CUtil::JSEscape($buttons)?>');</script>
 <?
 			$this->bButtonsStarted = false;
 		}
@@ -4976,7 +4976,7 @@ class CJSPopup
 		$arButtons = array_values($arButtons);
 
 ?>
-<script type="text/javascript"><?=$this->jsPopup?>.SetButtons([<?
+<script><?=$this->jsPopup?>.SetButtons([<?
 	foreach ($arButtons as $key => $btn)
 		echo ($key ? ',' : '').$arSB[$btn];
 ?>]);</script><?
@@ -5925,7 +5925,7 @@ class CAdminForm extends CAdminTabControl
 			{
 				echo '
 <input type="hidden" name="bxpublic" value="Y" /><input type="hidden" name="save" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
+<script>'.$this->publicObject.'.SetButtons(['.$this->publicObject.'.btnSave, '.$this->publicObject.'.btnCancel]);</script>
 ';
 			}
 			elseif (is_array($arJSButtons))
@@ -5933,7 +5933,7 @@ class CAdminForm extends CAdminTabControl
 				$arJSButtons = array_values($arJSButtons);
 				echo '
 <input type="hidden" name="bxpublic" value="Y" />
-<script type="text/javascript">'.$this->publicObject.'.SetButtons([
+<script>'.$this->publicObject.'.SetButtons([
 ';
 				foreach ($arJSButtons as $key => $btn)
 				{

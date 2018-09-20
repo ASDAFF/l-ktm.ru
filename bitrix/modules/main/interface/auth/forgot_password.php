@@ -33,7 +33,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 	</div>
 </div>
 
-<script type="text/javascript">
+<script>
 var obForgMsg = new BX.authFormForgotPasswordMessage('forgot_password_message', {url:''}),
 	obForg = new BX.authFormForgotPassword('forgot_password', {
 		url: '<?echo CUtil::JSEscape($authUrl."?forgot_password=yes".(($s=DeleteParam(array("forgot_password"))) == ""? "":"&".$s))?>',

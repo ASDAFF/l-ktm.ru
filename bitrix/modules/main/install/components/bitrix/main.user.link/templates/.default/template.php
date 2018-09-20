@@ -78,7 +78,7 @@ else
 			)
 		):
 			?>
-			<script type="text/javascript">
+			<script>
 				BX.tooltip(<?=$arResult["User"]["ID"]?>, "anchor_<?=$anchor_id?>", "<?=CUtil::JSEscape($arResult["ajax_page"])?>");
 			</script>
 			<?
@@ -94,7 +94,7 @@ else
 				!array_key_exists("USE_TOOLTIP", $arResult) 
 				|| $arResult["USE_TOOLTIP"]
 			):
-				?><script type="text/javascript">
+				?><script>
 				BX.tooltip(<?=$arResult["User"]["ID"]?>, "anchor_<?=$anchor_id?>", "<?=CUtil::JSEscape($arResult["ajax_page"])?>");
 			</script><?
 			endif;

@@ -20,7 +20,7 @@ foreach ($arResult["VALUE"] as $entityType => $arEntity):
 </tr><?
 endforeach;
 ?></table>
-<script type="text/javascript">
+<script>
 <?foreach ($arResult["VALUE"] as $entityType => $arEntity):?>
 	<?foreach ($arEntity as $entityId => $entity):?>
 	BX.tooltip(<?=$entityId?>, "balloon_<?=$entityType?>_<?=$entityId?>_<?=$_suf?>", "/bitrix/components/bitrix/crm.<?=strtolower($entityType)?>.show/card.ajax.php", "crm_balloon<?=($entityType == 'LEAD' || $entityType == 'DEAL'? '_no_photo': '_'.strtolower($entityType))?>", true);

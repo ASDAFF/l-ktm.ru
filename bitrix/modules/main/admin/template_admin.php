@@ -66,7 +66,7 @@ if(($arID = $lAdmin->GroupAction()) && $edit_php)
 				break;
 			case "export":
 			?>
-<script type="text/javascript">
+<script>
 exportData('<?=CUtil::JSEscape($ID)?>');
 </script>
 			<?
@@ -159,7 +159,7 @@ if ($edit_php)
 }
 $lAdmin->AddAdminContextMenu($aContext);
 
-// проверка на вывод только списка (в случае списка, скрипт дальше выполняться не будет)
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ)
 $lAdmin->CheckListMode();
 
 $APPLICATION->SetTitle(GetMessage("MAIN_T_ADMIN_TITLE"));

@@ -27,7 +27,7 @@ if (!empty($arResult["ERROR_MESSAGE"])):
 <?
 endif;
 ?>
-<script type="text/javascript">
+<script>
 window.reviewsCtrlEnterHandler<?=CUtil::JSEscape($arParams["form_index"]);?> = function()
 {
 	if (window.<?=$arParams["jsObjName"]?>)

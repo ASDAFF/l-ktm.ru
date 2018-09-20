@@ -112,7 +112,7 @@ if($strError != '')
 
 ?>
 <div id="ajax_status"></div>
-<script type="text/javascript">
+<script>
 window.lastSeoResult = null;
 function getSiteInfo(domain)
 {
@@ -259,7 +259,7 @@ function setAjaxStatus(text)
 
 $arYandexSites = array();
 ?>
-<script type="text/javascript">
+<script>
 function makeNewAuth()
 {
 	BX.showWait(BX('auth_result'));
@@ -301,7 +301,7 @@ if(!$bNeedAuth)
 <?
 	}
 ?>
-<script type="text/javascript">updateInfo();</script>
+<script>updateInfo();</script>
 <?
 }
 ?>

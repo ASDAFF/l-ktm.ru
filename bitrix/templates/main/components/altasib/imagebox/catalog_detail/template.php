@@ -96,7 +96,7 @@ $frame = $this->createFrame('alx_imagebox_div')->begin(); ?>
         <br/>
         <br/>
         <? $detail_title = array("over", "outside", "inside"); ?>
-        <script type="text/javascript">
+        <script>
             alx_lastimg = 0;
             isTouch = document.body.ontouchstart !== undefined;
             $(document).ready(function () {

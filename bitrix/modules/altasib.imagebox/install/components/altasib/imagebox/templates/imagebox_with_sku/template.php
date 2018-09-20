@@ -276,7 +276,7 @@ if ($arParams["SHOW_DETAIL_PICTURE"] == 1){?>
 </div>
 <?$detail_title = array ("over", "outside", "inside"); ?>
 
-<script type="text/javascript">
+<script>
         alx_lastimg = 0;
         $(document).ready(function(){
 					isTouch		= document.body.ontouchstart !== undefined;
