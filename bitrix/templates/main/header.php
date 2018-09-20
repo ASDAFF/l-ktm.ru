@@ -2,7 +2,7 @@
 $dir = $APPLICATION->GetCurDir();
 IncludeTemplateLangFile(__FILE__);
 ?><!DOCTYPE html>
-<html xmlns="//www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
 <head>
     <title><? $APPLICATION->ShowTitle();/*$APPLICATION->ShowTitle("SECOND_TITLE")*/ ?></title>
     <? $APPLICATION->ShowHead(); ?>

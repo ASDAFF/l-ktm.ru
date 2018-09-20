@@ -5,7 +5,7 @@
 				</div>
 				<div id="bottom">
 					<!-- Yandex.Share -->
-						<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+						<script src="//yandex.st/share/share.js" charset="utf-8"></script>
 						<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
 					<!-- /Yandex.Share -->
 
@@ -52,7 +52,7 @@
 
 				</div>
 				<!-- Yandex.Metrika counter -->
-				<script type="text/javascript">
+				<script>
 					(function (d, w, c) {
 							(w[c] = w[c] || []).push(function() {
 								try {
@@ -86,7 +86,7 @@
 				</script>
 				<noscript><div><img src="//mc.yandex.ru/watch/19581646" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 				<!-- /Yandex.Metrika counter-->
-				<script type='text/javascript'>
+				<script>
 					var liveTex = true,
 						liveTexID = 53327,
 						liveTex_object = true;
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function(){
 			$(window).scroll(function(){
 				if($(this).scrollTop()> 300 ){

@@ -283,7 +283,7 @@ function ".$sFromName."_SetDate()
 		if (strlen($value)>0 && $value!="NOT_REF")
 			$ds = "disabled";
 
-		?><script type="text/javascript">
+		?><script>
 			var dates = [];
 		<?
 		for ($i=0; $i<=90; $i++)
@@ -3870,7 +3870,7 @@ function IncludeAJAX()
 	/** @global CMain $APPLICATION */
 	global $APPLICATION;
 
-	$APPLICATION->AddHeadString('<script type="text/javascript">var ajaxMessages = {wait:"'.CUtil::JSEscape(GetMessage('AJAX_WAIT')).'"}</script>', true);
+	$APPLICATION->AddHeadString('<script>var ajaxMessages = {wait:"'.CUtil::JSEscape(GetMessage('AJAX_WAIT')).'"}</script>', true);
 	$APPLICATION->AddHeadScript('/bitrix/js/main/cphttprequest.js', true);
 }
 
@@ -4099,7 +4099,7 @@ class CJSCore
 			$arJSParams['accuracy'] = intval($params['accuracy']).'000';
 
 		$res = '<span id="'.htmlspecialcharsbx($id).'"></span>';
-		$res .= '<script type="text/javascript">BX.timer(\''.CUtil::JSEscape($id).'\', '.CUtil::PhpToJSObject($arJSParams).')</script>';
+		$res .= '<script>BX.timer(\''.CUtil::JSEscape($id).'\', '.CUtil::PhpToJSObject($arJSParams).')</script>';
 
 		return $res;
 	}
@@ -4131,7 +4131,7 @@ class CJSCore
 			$res = '';
 			foreach ($js as $val)
 			{
-				$res .= '<script type="text/javascript" src="'.CUtil::GetAdditionalFileURL($val).'"></script>'."\r\n";
+				$res .= '<script src="'.CUtil::GetAdditionalFileURL($val).'"></script>'."\r\n";
 			}
 			return $res;
 		}
@@ -4183,7 +4183,7 @@ class CJSCore
 
 		if ($jsMsg !== '')
 		{
-			$jsMsg = '<script type="text/javascript">'.$jsMsg.'</script>';
+			$jsMsg = '<script>'.$jsMsg.'</script>';
 			if ($bReturn)
 			{
 				return $jsMsg."\r\n";

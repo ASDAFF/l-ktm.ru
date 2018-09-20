@@ -33,7 +33,7 @@ if (!defined('BX_YMAP_SCRIPT_LOADED'))
 	{
 
 		$APPLICATION->AddHeadString(
-			'<script src="'.$arResult['MAPS_SCRIPT_URL'].'" type="text/javascript" charset="utf-8"></script>'
+			'<script src="'.$arResult['MAPS_SCRIPT_URL'].'" charset="utf-8"></script>'
 		);
 		define('BX_YMAP_SCRIPT_LOADED', 1);
 	}

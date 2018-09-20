@@ -28,7 +28,7 @@ else:
 		if ($arParams['WAIT_FOR_EVENT'])
 			$arTransParams['WAIT_FOR_EVENT'] = $arParams['WAIT_FOR_EVENT'];
 	}
-?><script type="text/javascript">
+?><script>
 	function BX_SetPlacemarks_<?=$arParams['MAP_ID']?>(map)
 	{
 		if(typeof window["BX_YMapAddPlacemark"] != 'function')
