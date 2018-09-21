@@ -17,7 +17,7 @@ $APPLICATION->IncludeComponent('bitrix:map.google.system', '.default', $arParams
 	</div>
 	
 </div>
-<script>
+<script type="text/javascript">
 function BXWaitForMap_search<?echo $arParams['MAP_ID']?>() 
 {
 	if (('\v'=='v') && (null == window.GLOBAL_arMapObjects['<?echo $arParams['MAP_ID']?>']))

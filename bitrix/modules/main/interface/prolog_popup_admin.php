@@ -18,7 +18,7 @@ echo $adminPage->ShowScript();
 $APPLICATION->ShowHeadStrings();
 $APPLICATION->ShowHeadScripts();
 ?>
-<script>
+<script type="text/javascript">
 function PopupOnKeyPress(e)
 {
 	if(!e) e = window.event

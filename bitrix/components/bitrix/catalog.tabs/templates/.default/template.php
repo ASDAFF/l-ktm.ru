@@ -47,7 +47,7 @@ if (isset($arParams["DATA"]) && !empty($arParams["DATA"]) && is_array($arParams[
 		</div>
 	</div>
 </div>
-<script>
+<script type="text/javascript">
 	var JCCatalogTabsParams = {
 		activeTabId: "<?=$activeTabId?>",
 		tabsContId: "<?=CUtil::JSEscape($arResult["ID"])?>",

@@ -22,7 +22,7 @@ $funcSuffix = uniqid();
 		<a id="crm-<?=$fieldUID?>-open" href="#open" onclick="obCrm[this.id].Open()"><?=GetMessage('CRM_FF_CHOISE');?></a>
 	</div>
 </div>
-<script>
+<script type="text/javascript">
 	var _BX_CRM_FIELD_INIT_<?=$funcSuffix?> = function()
 	{
 		if(typeof(CRM) == 'undefined')

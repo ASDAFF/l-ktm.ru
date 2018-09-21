@@ -99,7 +99,7 @@ else
 $only_edit = !$USER->CanDoOperation('fileman_add_element_to_menu') || !$USER->CanDoFileOperation('fm_create_new_file', $arPath_m);
 
 /******* POST **********/
-//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+//проверим права на доступ в эту папку
 if(!$USER->CanDoOperation('fileman_edit_existent_files') || !$USER->CanDoFileOperation('fm_edit_existent_file', $arPath_m) || (!$bEdit && $only_edit))
 {
 	$strWarning = GetMessage("ACCESS_DENIED");
@@ -117,7 +117,7 @@ else
 		$aMenuLinksTmp = $res["aMenuLinks"];
 		$aMenuLinksTmp_ = Array();
 
-		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ $aMenuLinksTmp пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
+		//соберем $aMenuLinksTmp из того что пришло с формы
 		$aMenuSort = Array();
 		for($i=0; $i<count($ids); $i++)
 		{
@@ -179,7 +179,7 @@ else
 					$aMenuSort[$j] = $tmpSort;
 				}
 
-		//пїЅпїЅпїЅпїЅпїЅпїЅ $aMenuLinksTmp пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ :-)
+		//теперь $aMenuLinksTmp прямо в таком готовом виде, что хоть меню рисуй :-)
 		if (!check_bitrix_sessid())
 		{
 			$strWarning = GetMessage('MENU_EDIT_SESSION_EXPIRED');
@@ -371,7 +371,7 @@ CAdminFileDialog::ShowScript(
 </div>
 	<?if(!$only_edit):?><br /><input type="button" onClick="menuAdd()" value="<?echo GetMessage("MENU_EDIT_ADD_ITEM")?>" /><?endif;?>
 	<input type="hidden" name="itemcnt" value="<?echo $itemcnt?>" />
-<script>
+<script type="text/javascript">
 var currentLink = -1;
 var currentRow = null;
 

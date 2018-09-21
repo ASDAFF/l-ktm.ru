@@ -9,7 +9,7 @@ if (isset($templateData['TEMPLATE_THEME']))
 if (isset($templateData['JS_OBJ']))
 {
 ?>
-<script>
+<script type="text/javascript">
 BX.ready(
 	BX.defer(function(){
 		if (!!window.<? echo $templateData['JS_OBJ']; ?>)

@@ -127,7 +127,7 @@ $GLOBALS['APPLICATION']->SetAdditionalCSS('/bitrix/js/highloadblock/css/highload
 	<input type="hidden" name="sort_type" value="">
 </form>
 
-<script>
+<script type="text/javascript">
 	BX.ready(function(){
 		var rows = BX.findChildren(BX('report-result-table'), {tag:'th'}, true);
 		for (i in rows)

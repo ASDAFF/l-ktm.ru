@@ -45,7 +45,7 @@ AddEventHandler("fileman", "OnIncludeLightEditorScript", "CustomizeLightEditor")
 if ($arParams["LHE"]['ctrlEnterHandler'] === true || !empty($arParams["LHE"]['ctrlEnterHandler']))
 {
 ?>
-<script>
+<script type="text/javascript">
 window.__ctrlEnterHandler<?=$arParams["FORM_ID"]?> = function(e)
 {
 	window['<?=$arParams["LHE"]["jsObjName"]?>'].SaveContent();
@@ -102,7 +102,7 @@ if ($arParams["LHE"]['ctrlEnterHandler'] === true || !empty($arParams["LHE"]['ct
 	$res['ctrlEnterHandler'] = "__ctrlEnterHandler".$arParams["FORM_ID"];
 $LHE->Show($res);
 ?></div>
-<script>
+<script type="text/javascript">
 <?
 /* To remember:
  * All events from LHE (fileman) are executed from window (LHE_OnBeforeParsersInit, LHE_ConstructorInited, LHE_OnInit)

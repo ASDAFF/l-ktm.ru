@@ -80,7 +80,7 @@ else
 	</div>
 </div>
 
-<script>
+<script type="text/javascript">
 	app.setPageTitle({title: "<?=GetMessage("BCLMMSL_TITLE")?>"});
 	var bcmm = new __BitrixCloudMobMon;
 	BX.addCustomEvent('onAfterBCMMSiteDelete', function (params){ bcmm.showRefreshing(); location.reload(true); });

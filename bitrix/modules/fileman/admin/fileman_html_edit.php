@@ -609,7 +609,7 @@ CAdminFileDialog::ShowScript(Array
 );
 
 ?>
-<script>
+<script type="text/javascript">
 BX.addCustomEvent(window, 'onAfterFileDialogShow', function(){
 	var _filenameDialogInput = BX("__bx_file_path_bar");
 	var _filenamePageInput = BX('filename');

@@ -39,15 +39,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="author" content="Logan Cai" />
 <meta name="website" content="http://www.phpletter.com" />
-<script src="jscripts/ajaximageeditor_compressed.js"></script>
+<script type="text/javascript" src="jscripts/ajaximageeditor_compressed.js"></script>
 <!--
-<script src="jscripts/jquery.js"></script>
-<script src="jscripts/form.js"></script>
-<script src="jscripts/select.js"></script>
-<script src="jscripts/jqModal.js"></script>
-<script src="jscripts/rotate.js"></script>
-<script src="jscripts/interface.js"></script>
-<script src="jscripts/image_editor_general.js"></script>
+<script type="text/javascript" src="jscripts/jquery.js"></script>
+<script type="text/javascript" src="jscripts/form.js"></script>
+<script type="text/javascript" src="jscripts/select.js"></script>
+<script type="text/javascript" src="jscripts/jqModal.js"></script>
+<script type="text/javascript" src="jscripts/rotate.js"></script>
+<script type="text/javascript" src="jscripts/interface.js"></script>
+<script type="text/javascript" src="jscripts/image_editor_general.js"></script>
 
 -->
 
@@ -56,7 +56,7 @@
 
 
 
-<script>
+<script type="text/javascript">
 	var imageHistory = false;
 	var currentFolder =  '<?php echo removeTrailingSlash(backslashToSlash(dirname($path))); ?>';
 	var warningLostChanges = '<?php echo IMG_WARNING_LOST_CHANAGES; ?>';

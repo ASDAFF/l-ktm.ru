@@ -433,7 +433,7 @@ if(!$bReadOnly && check_bitrix_sessid())
 		if($idNewElement)
 		{
 			?>
-			<script>
+			<script type="text/javascript">
 				top.BX.closeWait();
 				if(top.BX.WindowManager.Get())
 				{
@@ -489,7 +489,7 @@ else
 
 	$tabControl->BeginNextTab();
 	?>
-	<script>
+	<script type="text/javascript">
 		BX('edit_edit_table').className += ' adm-shop-page-table';
 
 		var CellTPL = [];
@@ -680,7 +680,7 @@ else
 				<div class="adm-detail-title-view-tab"><?= GetMessage("IB_SEG_SELECTED_PROPERTIES") ?></div>
 				<input type="hidden" value="0" id="generator_property_table_max_id">
 				<div class="adm-shop-table-block" id="generator_property_table">
-					<script>
+					<script type="text/javascript">
 						<?
 						foreach($arResult as $key => $arProperty)
 						{?>
@@ -705,7 +705,7 @@ else
 						<?$arFileProperties[]=array("ID" => "ANNOUNCE", "NAME" => GetMessage("IB_SEG_ANNOUNCE")); ?>
 						<span class="adm-btn" onclick="obPropertyTable.addPropertyImages();" id='ib_seg_add_images_button'><?= GetMessage("IB_SEG_ADD_PICTURES") ?></span>
 							<span class="adm-shop-bar-btn-wrap" id='ib_seg_property_span'>
-								<script>
+								<script type="text/javascript">
 									addProperty(<?=CUtil::PhpToJSObject($arFileProperties)?>);
 								</script>
 							</span>

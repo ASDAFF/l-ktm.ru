@@ -23,7 +23,7 @@ if($arResult["DOMAIN"] == "")
 						'<a href="javascript:void(0);">'.$domainName.'</a>'.
 					'</li>'.
 				'</ul>'.
-				'<script>'.
+				'<script type="text/javascript">'.
 					'BX.ready(function(){ bcPush.makeFastButton("li_id_'.$domainName.'", "'.$domLink.'");});'.
 				'</script>'
 		);
@@ -81,7 +81,7 @@ $APPLICATION->IncludeComponent(
 
 ?>
 
-<script>
+<script type="text/javascript">
 
 	app.setPageTitle({title: "<?=GetMessage('BCMMP_TITLE')?>"});
 

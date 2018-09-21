@@ -10,7 +10,7 @@ switch($_REQUEST['bxsender']):
 	case 'core_window_cdialog':
 	case 'core_window_cadmindialog':
 ?>
-<script bxrunfirst="true">top.BX.WindowManager.Get().Authorize(<?=CUtil::PhpToJsObject($arAuthResult)?>)</script>
+<script type="text/javascript" bxrunfirst="true">top.BX.WindowManager.Get().Authorize(<?=CUtil::PhpToJsObject($arAuthResult)?>)</script>
 <?
 	break;
 
@@ -20,7 +20,7 @@ switch($_REQUEST['bxsender']):
 
 	case 'admin_wizard_dialog':
 ?>
-<script bxrunfirst="true">
+<script type="text/javascript" bxrunfirst="true">
 	(new top.BX.CAuthDialog({
 		content_url: "/bitrix/admin/wizard_install.php",
 		auth_result: <?=CUtil::PhpToJsObject($arAuthResult)?>,
@@ -46,7 +46,7 @@ switch($_REQUEST['bxsender']):
 
 	case 'fileman_html_editor':
 ?>
-<script bxrunfirst="true">
+<script type="text/javascript" bxrunfirst="true">
 	top.BX.onCustomEvent(top, 'OnHtmlEditorRequestAuthFailure', ['<?= CUtil::JSEscape($_REQUEST['bxeditor'])?>', <?=CUtil::PhpToJsObject($arAuthResult)?>]);
 </script>
 <?
@@ -106,7 +106,7 @@ switch($_REQUEST['bxsender']):
 		$form = ob_get_contents();
 		ob_end_clean();
 ?>
-<script>
+<script type="text/javascript">
 var authWnd = top.BX.WindowManager.Get();
 authWnd.SetTitle('<?=GetMessageJS('AUTH_TITLE')?>');
 authWnd.SetContent('<?=CUtil::JSEscape($form)?>');

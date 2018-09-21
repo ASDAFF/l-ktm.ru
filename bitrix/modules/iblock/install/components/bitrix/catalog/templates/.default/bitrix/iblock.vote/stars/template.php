@@ -62,7 +62,7 @@ $templateData = array(
 		</td>
 	</tr>
 </table>
-<script>
+<script type="text/javascript">
 BX.ready(function(){
 	window.<?=$strObName;?> = new JCIblockVoteStars(<?=CUtil::PhpToJSObject($arJSParams, false, true);?>);
 

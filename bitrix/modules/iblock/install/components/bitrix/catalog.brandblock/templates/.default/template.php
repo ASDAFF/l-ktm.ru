@@ -75,7 +75,7 @@ $mouseEvents = 'onmouseover="'.$strObName.'.itemOver(this);" onmouseout="'.$strO
 		}
 		?>
 </div>
-<script>
+<script type="text/javascript">
 	var <?=$strObName;?>;
 	BX.ready( function(){
 		if(typeof window["JCIblockBrands"] != 'function') //if cached by upper components, etc.

@@ -24,19 +24,19 @@ else if ($this->__templateName == ".photostring")
 
 if ($this->__templateName == "")$this->__templateName = ".default";
 		{
-			//echo '<script src="', $this->__path, '/plugins/fancybox/jquery.fancybox-1.3.4.pack.js"></script>';
+			//echo '<script type="text/javascript" src="', $this->__path, '/plugins/fancybox/jquery.fancybox-1.3.4.pack.js"></script>';
 			echo '<link rel="stylesheet" type="text/css" href="', $this->__path, '/templates/.default/style_.css" />';
 			//echo '<link rel="stylesheet" type="text/css" href="', $this->__path, '/plugins/fancybox/jquery.fancybox-1.3.4.css" media="screen" />';
-			echo '<script src="', $this->__path, '/plugins/jquery.jcarousel.js"></script>';
-			echo '<script src="', $this->__path, '/plugins/easyzoom/easyzoom.js"></script>';
+			echo '<script type="text/javascript" src="', $this->__path, '/plugins/jquery.jcarousel.js"></script>';
+			echo '<script type="text/javascript" src="', $this->__path, '/plugins/easyzoom/easyzoom.js"></script>';
 		}
 		
 if($this -> __templateName == ".photostring")
         {
 			//echo '<link rel="stylesheet" type="text/css" href="', $this->__path, '/plugins/fancybox/jquery.fancybox-1.3.4.css" media="screen" />';
 			echo '<link rel="stylesheet" type="text/css" href="', $this->__path, '/templates/.photostring/style_.css" />';
-			echo '<script src="', $this->__path, '/plugins/jquery.jcarousel.js"></script>';
-			echo '<script src="', $this->__path, '/plugins/easyzoom/easyzoom.js"></script>';
+			echo '<script type="text/javascript" src="', $this->__path, '/plugins/jquery.jcarousel.js"></script>';
+			echo '<script type="text/javascript" src="', $this->__path, '/plugins/easyzoom/easyzoom.js"></script>';
 		}
 
 $arFilter = Array("ID"=>$arParams["ELEMENT_ID"]);

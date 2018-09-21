@@ -190,7 +190,7 @@ endif;
 	</div>
 </div>
 <?CJSCore::Init();?>
-<script>
+<script type="text/javascript">
 	BX.bind(document, "keydown", function (event) {
 
 		event = event || window.event;

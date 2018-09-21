@@ -106,7 +106,7 @@ if ($_POST['mfi_mode'] &&
 
 		$uid = intval($_POST["uniqueID"]);
 ?>
-<script>
+<script type="text/javascript">
 parent.FILE_UPLOADER_CALLBACK_<?=$uid?>(<?=CUtil::PhpToJsObject($arResult);?>, <?=$uid;?>);
 </script>
 <?

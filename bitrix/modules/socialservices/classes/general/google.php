@@ -216,7 +216,7 @@ class CSocServGoogleOAuth extends CSocServAuth
 		$location = ($mode == "opener") ? 'if(window.opener) window.opener.location = \''.$url.'\'; window.close();' : ' window.location = \''.$url.'\';';
 
 		$JSScript = '
-		<script>
+		<script type="text/javascript">
 		'.$location.'
 		</script>
 		';

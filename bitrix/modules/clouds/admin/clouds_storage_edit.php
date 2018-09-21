@@ -366,7 +366,7 @@ if(!is_array($arRules))
 		$ii=1;
 	}	?>
 		</table>
-<script>
+<script type="text/javascript">
 BX.ready(function() {
 	BX.addCustomEvent(document.forms.editform, 'onAutoSaveRestore', function(ob, data)
 	{

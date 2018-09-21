@@ -106,7 +106,7 @@ $tabControl->BeginNextTab();
 $siteIdEnc = Converter::getHtmlConverter()->encode($arDomain['LID']);
 $siteNameEnc = Converter::getHtmlConverter()->encode($arDomain['SITE_NAME']);
 ?>
-<script>
+<script type="text/javascript">
 function saveParam(field)
 {
 	var input = BX(field + '_edit');
@@ -218,7 +218,7 @@ $tabControl->BeginNextTab();
 <?
 $tabControl->End();
 ?>
-<script>
+<script type="text/javascript">
 function BXLoadInfo(action)
 {
 	BX.ajax.loadJSON(

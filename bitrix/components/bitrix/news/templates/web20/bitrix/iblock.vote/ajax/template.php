@@ -14,7 +14,7 @@ else
 ?>
 <div class="iblock-vote" id="vote_<?echo $arResult["ID"]?>">
 
-<script>
+<script type="text/javascript">
 if(!window.voteScript) window.voteScript =
 {
 	trace_vote: function(div, flag)
@@ -50,8 +50,8 @@ if(!window.voteScript) window.voteScript =
 	},
 	<?
 	//16*
-	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ JavaScript
-	//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+	//Интерфейсный JavaScript
+	//хороший кандидат на "генерализацию"
 	?>
 	do_vote: function(div, parent_id, arParams)
 	{
@@ -65,7 +65,7 @@ if(!window.voteScript) window.voteScript =
 			var obContainer = document.getElementById(parent_id);
 			if (obContainer)
 			{
-				//16a пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ div пїЅпїЅпїЅ table)
+				//16a Мы предполагаем, что шаблон содержит только один элемент (например div или table)
 				var obResult = document.createElement("DIV");
 				obResult.innerHTML = data;
 				obContainer.parentNode.replaceChild(obResult.firstChild, obContainer);
@@ -75,16 +75,16 @@ if(!window.voteScript) window.voteScript =
 		BX('wait_' + parent_id).innerHTML = BX.message('JS_CORE_LOADING');
 		<?
 		//17*
-		//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+		//Запрос будет отослан напрямую компоненту.
 		//18*
-		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		//Добиваем параметры поста выбором пользователя
 		?>
 		arParams['vote'] = 'Y';
 		arParams['vote_id'] = vote_id;
 		arParams['rating'] = vote_value;
 		<?
 		//19*
-		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+		//Отправляем запрос
 		?>
 		BX.ajax.post(
 			'/bitrix/components/bitrix/iblock.vote/component.php',
@@ -93,16 +93,16 @@ if(!window.voteScript) window.voteScript =
 		);
 		<?
 		//20*
-		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ component.php (пїЅпїЅпїЅпїЅпїЅпїЅ)
+		//Продолжение экскурсии в файле component.php (начало)
 		?>
 	}
 }
 </script>
 <?
 //10*
-//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ id пїЅпїЅпїЅпїЅпїЅ div'пїЅ
-//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ (div'пїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+//Обратите внимание на id этого div'а
+//Именого его (div'а) содержимое и будет заменяться
+//результатом запроса
 ?>
 <table border="0" cellspacing="0" cellpadding="0">
 	<tr>
@@ -128,10 +128,10 @@ if(!window.voteScript) window.voteScript =
 				<?if(round($DISPLAY_VALUE) > $i):?>
 					<td><div id="vote_<?echo $arResult["ID"]?>_<?echo $i?>" class="star-active star-voted" title="<?echo $name?>" onmouseover="voteScript.trace_vote(this, true);" onmouseout="voteScript.trace_vote(this, false)" onclick="<?echo htmlspecialcharsbx($onclick);
 //11*
-//пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-//пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-//пїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+//Вызов функции, которая сформирует, отошлет и обработает запрос
+//Первый параметр - понадобится для определения величины голоса
+//Второй - это id контейнера для "замены" ответом
+//Третий - содержит ключ к параметрам
 ?>"></div></td>
 				<?else:?>
 					<td><div id="vote_<?echo $arResult["ID"]?>_<?echo $i?>" class="star-active star-empty" title="<?echo $name?>" onmouseover="voteScript.trace_vote(this, true);" onmouseout="voteScript.trace_vote(this, false)" onclick="<?echo htmlspecialcharsbx($onclick)?>"></div></td>
@@ -152,5 +152,5 @@ if(!window.voteScript) window.voteScript =
 </table>
 </div><?
 //12*
-//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ component.php (пїЅпїЅпїЅпїЅпїЅ)
+//Продолжение экскурсии в файле component.php (конец)
 ?>

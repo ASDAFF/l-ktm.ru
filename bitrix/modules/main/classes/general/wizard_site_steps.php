@@ -692,7 +692,7 @@ class CPackageSelectStructure extends CWizardStep
 			</table>
 			</div>
 
-			<script>
+			<script type="text/javascript">
 
 				function WizSaveSiteTree()
 				{

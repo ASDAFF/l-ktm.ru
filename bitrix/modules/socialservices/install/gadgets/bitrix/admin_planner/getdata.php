@@ -138,7 +138,7 @@ if($accessToken != '' && $domain != '' && !$needAuthorize)
 	else
 	{
 		?>
-		<script>
+		<script type="text/javascript">
 			function checkOauth()
 			{
 				var d = document.getElementById('portal').value;

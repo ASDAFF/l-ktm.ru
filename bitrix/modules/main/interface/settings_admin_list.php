@@ -128,7 +128,7 @@ if($USER->CanDoOperation('edit_other_settings'))
 ?>
 </form>
 </div>
-<script>
+<script type="text/javascript">
 BX.adminFormTools.modifyFormElements('list_settings')
 </script>
 <?

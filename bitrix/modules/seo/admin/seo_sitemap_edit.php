@@ -859,7 +859,7 @@ if($bForum)
 		if(!$bFound)
 		{
 ?>
-<script>
+<script type="text/javascript">
 function setForumActive(check, cont)
 {
 	var row = check.parentNode.parentNode;

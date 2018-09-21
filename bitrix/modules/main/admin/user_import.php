@@ -338,7 +338,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $tabStep > 2 && check_bitrix_sessid(
 				{
 					// if user is not found among already existing ones, then import him
 
-					// пїЅ $arLdapUserFields - пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ user'пїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ ldap
+					// в $arLdapUserFields - поля текущего user'а, взятые из ldap
 
 					$arUserFields = $ldp->GetUserFields($arLdapUserFields, $departmentCache);
 
@@ -647,7 +647,7 @@ if(CModule::IncludeModule("iblock")):
 				<option value="<?=$arLdap["ID"]?>"<?if ($ldapServer == $arLdap["ID"]): $indSelected = $i;?> selected<?endif?>><?=$arLdap["NAME"]?></option>
 			<?endwhile?>
 			</select>
-			<script>
+			<script type="text/javascript">
 				<?
 				$arMapFields = array();
 
@@ -862,7 +862,7 @@ $tabControl->Buttons();
 
 <iframe style="display:none;" id="progress" name="progress" src="javascript:''"></iframe>
 
-<script>
+<script type="text/javascript">
 <!--
 
 function Start(position, cntExecuted)

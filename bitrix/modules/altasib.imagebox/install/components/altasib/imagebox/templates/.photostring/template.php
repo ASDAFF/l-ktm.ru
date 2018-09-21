@@ -161,7 +161,7 @@ function show_pict($big_pict, $small_pict, $width, $height, $id, $name, $zoom)
 <?$frame->beginStub();?>
 	<?=GetMessage("ALX_LOADING_TEXT")?>
 <?$frame->end();?>
-<script>
+<script type="text/javascript">
 <?$detail_title = array ("over", "outside", "inside"); ?>
 alx_lastimg_rel = '';
 alx_lastimg_obj = '';

@@ -85,7 +85,7 @@ class CSocServTwitter extends CSocServAuth
 		if(CModule::IncludeModule("socialnetwork") && strpos($url, "current_fieldset=") === false)
 			$url = (preg_match("/\?/", $url)) ? $url."&current_fieldset=SOCSERV" : $url."?current_fieldset=SOCSERV";
 		echo '
-<script>
+<script type="text/javascript">
 if(window.opener)
 	window.opener.location = \''.CUtil::JSEscape($url).'\';
 window.close();

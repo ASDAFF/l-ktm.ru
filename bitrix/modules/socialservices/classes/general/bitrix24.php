@@ -100,7 +100,7 @@ class CSocServBitrixOAuth extends CSocServAuth
 		$url = CUtil::JSEscape($url);
 		$location = ($mode == "opener") ? 'if(window.opener) window.opener.location = \''.$url.'\'; window.close();' : ' window.location = \''.$url.'\';';
 		$JSScript = '
-		<script>
+		<script type="text/javascript">
 		'.$location.'
 		</script>
 		';
@@ -125,7 +125,7 @@ class CSocServBitrixOAuth extends CSocServAuth
 		$url = CUtil::JSEscape($url);
 		$location = ($mode == "opener") ? 'if(window.opener) window.opener.location = \''.$url.'\'; window.close();' : ' window.location = \''.$url.'\';';
 		$JSScript = '
-		<script>
+		<script type="text/javascript">
 		'.$location.'
 		</script>
 		';

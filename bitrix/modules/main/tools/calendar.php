@@ -29,7 +29,7 @@ $name = preg_replace("/[^a-z0-9_\\[\\]]/i", "", $_REQUEST["name"]);
 $from = preg_replace("/[^a-z0-9_\\[\\]]/i", "", $_REQUEST["from"]);
 $to = preg_replace("/[^a-z0-9_\\[\\]]/i", "", $_REQUEST["to"]);
 ?>
-<script>
+<script type="text/javascript">
 function KeyPress()
 {
 	if(window.event.keyCode == 27)

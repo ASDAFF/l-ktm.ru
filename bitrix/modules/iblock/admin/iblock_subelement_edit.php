@@ -842,7 +842,7 @@ do{ //one iteration loop
 			// i have only savebtn and cancel
 			if ((true == isset($_POST['Update'])) && (0 < strlen($_POST['Update'])))
 			{
-				?><script>
+				?><script type="text/javascript">
 				top.BX.closeWait(); top.BX.WindowManager.Get().AllowClose(); top.BX.WindowManager.Get().Close();
 				top.ReloadOffers();
 				</script><?
@@ -857,7 +857,7 @@ do{ //one iteration loop
 		if($bWorkflow)
 			CIBlockElement::WF_UnLock($ID);
 
-		?><script>
+		?><script type="text/javascript">
 		top.BX.closeWait(); top.BX.WindowManager.Get().AllowClose(); top.BX.WindowManager.Get().Close();
 		</script><?
 		die();
@@ -1100,7 +1100,7 @@ else
 	{
 		CJSCore::Init(array('window','translit'));
 		?>
-		<script>
+		<script type="text/javascript">
 		var linked=<?if ($bLinked) echo 'true'; else echo 'false';?>;
 		function set_linked()
 		{

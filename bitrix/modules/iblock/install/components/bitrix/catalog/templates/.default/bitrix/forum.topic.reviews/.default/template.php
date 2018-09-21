@@ -468,7 +468,7 @@ endif;
 	</div>
 </form>
 </div>
-<script>
+<script type="text/javascript">
 
 if (typeof oErrors != "object")
 	var oErrors = {};

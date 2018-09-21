@@ -238,7 +238,7 @@ $tabControl->BeginNextTab();
 <?
 $tabControl->End();
 ?>
-<script>
+<script type="text/javascript">
 function BXLoadInfo(action)
 {
 	BX.ajax.loadJSON(

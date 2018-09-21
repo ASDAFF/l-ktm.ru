@@ -266,7 +266,7 @@ endforeach; ?>
 <tr>
 	<td></td>
 	<td style="padding-bottom:10px;">
-<script>
+<script type="text/javascript">
 
 function settingsSetGroupID(el)
 {

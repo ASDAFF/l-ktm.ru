@@ -29,7 +29,7 @@ class CComponentParamsManager
 
 		$mess_lang = self::GetLangMessages();
 		?>
-		<script>
+		<script type="text/javascript">
 			BX.message(<?=CUtil::PhpToJSObject($mess_lang, false);?>);
 			top.oBXComponentParamsManager = window.oBXComponentParamsManager = new BXComponentParamsManager(<?=CUtil::PhpToJSObject($config)?>);
 		</script>

@@ -119,7 +119,7 @@ class CRsaSecurity
 		$GLOBALS["APPLICATION"]->AddHeadScript("/bitrix/js/main/rsasecurity.js");
 
 		echo '
-<script>
+<script type="text/javascript">
 top.BX.defer(top.rsasec_form_bind)('.CUtil::PhpToJSObject($arData).');
 </script>
 ';

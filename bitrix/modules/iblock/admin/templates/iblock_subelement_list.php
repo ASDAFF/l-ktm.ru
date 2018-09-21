@@ -2273,7 +2273,7 @@ if (!empty($arRows))
 
 	$lAdmin->AddGroupActionTable($arGroupActions, $arParams);
 
-?><script>
+?><script type="text/javascript">
 function CheckProductName(id)
 {
 	if (!id)
@@ -2398,7 +2398,7 @@ function ShowSkuGenerator(id)
 	//We need javascript not in excel mode
 	if (($_REQUEST["mode"]=='list' || $_REQUEST["mode"]=='frame') && $boolSubCatalog && $boolSubCurrency)
 	{
-		?><script>
+		?><script type="text/javascript">
 		top.arSubCatalogShowedGroups = new Array();
 		top.arSubExtra = new Array();
 		top.arSubCatalogGroups = new Array();

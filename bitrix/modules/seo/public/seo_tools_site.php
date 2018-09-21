@@ -4,7 +4,7 @@ require_once($_SERVER["DOCUMENT_ROOT"].BX_ROOT."/modules/main/prolog.php");
 
 IncludeModuleLangFile(__FILE__);
 
-die('пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+die('Еще не сделано');
 
 CModule::IncludeModule('seo');
 
@@ -240,15 +240,15 @@ $counters = COption::GetOptionString('seo', 'counters', SEO_COUNTERS_DEFAULT);
 	
 //HTML output
 $aTabs = array(
-	array("DIV" => "edit1", "TAB" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', "ICON" => "main_settings", "TITLE" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ '.$back_url),
-	array("DIV" => "edit5", "TAB" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', "ICON" => "main_settings", "TITLE" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'),
-	array("DIV" => "edit2", "TAB" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', "ICON" => "main_settings", "TITLE" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'),
-	array("DIV" => "edit3", "TAB" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', "ICON" => "main_settings", "TITLE" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'),
-	array("DIV" => "edit4", "TAB" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ', "ICON" => "main_settings", "TITLE" => 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ'),
+	array("DIV" => "edit1", "TAB" => 'Страница', "ICON" => "main_settings", "TITLE" => 'Страница '.$back_url),
+	array("DIV" => "edit5", "TAB" => 'Управление', "ICON" => "main_settings", "TITLE" => 'Управление свойствами'),
+	array("DIV" => "edit2", "TAB" => 'Индексация', "ICON" => "main_settings", "TITLE" => 'Индексация'),
+	array("DIV" => "edit3", "TAB" => 'Переходы', "ICON" => "main_settings", "TITLE" => 'Переходы с поисковиков'),
+	array("DIV" => "edit4", "TAB" => 'Ссылающиеся сайты', "ICON" => "main_settings", "TITLE" => 'Ссылающиеся сайты'),
 );
 $tabControl = new CAdminTabControl("tabControl", $aTabs);
 
-$APPLICATION->SetTitle('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ SEO пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
+$APPLICATION->SetTitle('Инструменты SEO для страницы');
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_after.php");
 ?>
 <form name="form1" method="POST" action="" enctype="multipart/form-data">
@@ -285,21 +285,21 @@ if (strlen($counters) > 0):
 	$counters = str_replace(array('#DOMAIN#'), array(/*$server_name*/ 'www.bitrixsoft.com'), $counters);
 ?>
 <tr>
-	<td width="40%">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: <a href="javascript:alert('no help yet')">[?]</a>: </td>
+	<td width="40%">Счетчики: <a href="javascript:alert('no help yet')">[?]</a>: </td>
 	<td width="60%"><?echo $counters;?></td>
 </tr>
 <?endif;?>
 </table>
-<table id="bx_stats_loading_notify" class="edit-table"><tr><td align="center"><?ShowNote('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ...');?></td></tr></table>
+<table id="bx_stats_loading_notify" class="edit-table"><tr><td align="center"><?ShowNote('Загрузка информации о странице...');?></td></tr></table>
 <table id="bx_stats_table" class="edit-table" cellspacing="0" cellpadding="0" border="0" style="display: none;">
 <tbody>
 <tr height="0"><td width="40%" nowrap="nowrap"></td><td width="60%" nowrap="nowrap"></td></tr>
 <tr class="heading" id="bx_page_stats_row">
-	<td colspan="2" align="center">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
+	<td colspan="2" align="center">Статистика страницы</td>
 </tr>
 <tr>
 	<td colspan="2">
-		<a href="javascript:void(0)" onclick="BXToggle('bx_page_extended_data'); return false;">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>
+		<a href="javascript:void(0)" onclick="BXToggle('bx_page_extended_data'); return false;">подробнее</a>
 		<div id="bx_page_extended_data" style="display: none;"><table width="100%">
 			<tr>
 				<td width="70%">
@@ -322,7 +322,7 @@ if (strlen($counters) > 0):
 	</td>
 </tr>
 <tr class="heading">
-	<td colspan="2" align="center">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</td>
+	<td colspan="2" align="center">Продвигаемые слова</td>
 </tr>
 <?
 if ($prop_code = COption::GetOptionString('seo', 'property_internal_keywords', 'keywords_inner')):
@@ -395,17 +395,17 @@ if ($prop_code = COption::GetOptionString('seo', 'property_internal_keywords', '
 		<table width="100%" class="bx-seo-words-table" id="bx_seo_words_table_<?echo $key?>">
 			<thead>
 				<tr class="heading">
-					<td>пїЅпїЅпїЅпїЅпїЅ</td>
-					<td>пїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.</td>
-					<td>пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
+					<td>слово</td>
+					<td>всего/контраст.</td>
+					<td>загл. окна/страницы</td>
 					<td>&lt;b&gt;/&lt;i&gt;</td>
-					<td>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅ</td>
-					<td>пїЅпїЅпїЅпїЅпїЅпїЅ</td>
+					<td>описание/ключ. слова</td>
+					<td>ссылки</td>
 				</tr>
 			</thead>
 			<tbody></tbody>
 		</table>
-		<script>
+		<script type="text/javascript">
 window.BXUpdateKeywordsStats_<?echo $key?> = function(data) {BXUpdateKeywordsStats('<?echo $key?>', data)};
 		</script>
 <?			
@@ -418,7 +418,7 @@ window.BXUpdateKeywordsStats_<?echo $key?> = function(data) {BXUpdateKeywordsSta
 endif;
 ?>
 <tr class="heading">
-	<td colspan="2" align="center">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
+	<td colspan="2" align="center">Рекомендации и исправления</td>
 </tr>
 <tr>
 	<td colspan="2" id="bx_page_errors"></td>
@@ -428,14 +428,14 @@ endif;
 $tabControl->BeginNextTab();
 ?>
 <tr>
-	<td>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <a href="javascript:alert('no help yet')">[?]</a>: </td>
+	<td>Базовый заголовок страницы <a href="javascript:alert('no help yet')">[?]</a>: </td>
 	<td><input type="text" name="pageTitle" value="<?=htmlspecialcharsEx($pageTitle)?>"  size="50" /></td>
 </tr>
 <? 
 if ($titleFinal != $pageTitle):
 ?>
 <tr>
-	<td valign="top">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <a href="javascript:alert('no help yet')">[?]</a>: </td>
+	<td valign="top">Текущий заголовок страницы <a href="javascript:alert('no help yet')">[?]</a>: </td>
 	<td>
 		<b><?echo $titleFinal?></b>&nbsp;<?if ($titleChangerName != ''):?>(<?echo htmlspecialchars($titleChangerName)?>)&nbsp;<?endif;?>
 		<?if (is_array($arTitleChangerIcons)):?><div class="bx-component-panel-overrider" style="position: relative; display: inline; top: -17px;"><?echo $APPLICATION->DrawIcons($arTitleChangerIcons)?></div></td><?endif;?>
@@ -489,7 +489,7 @@ $tabControl->BeginNextTab();
 if (!CModule::IncludeModule('statistic')):
 ?>
 	<tr>
-		<td><?ShowError('пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');?></td>
+		<td><?ShowError('Эта функция недоступна без модуля Веб-аналитики');?></td>
 	</tr>
 <?
 else:
@@ -514,7 +514,7 @@ else:
 	if (count($arSearchers) <= 0):
 ?>
 	<tr>
-		<td>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ <a href="/bitrix/admin/settings.php?mid=seo&tabControl_active_tab=edit3">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ SEO</a>.</td>
+		<td>Для использования данной функции необходимо задать список используемых поисковых систем в <a href="/bitrix/admin/settings.php?mid=seo&tabControl_active_tab=edit3">настройках модуля SEO</a>.</td>
 	</tr>
 <?
 	else:
@@ -545,7 +545,7 @@ else:
 			$days_count = floor((time() - $last_ts)/86400);
 ?>
 	<tr class="heading">
-		<td colspan="2">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <?echo $days_count?> пїЅпїЅпїЅпїЅ</td>
+		<td colspan="2">Поисковые системы, индексировавшие страницу за последние <?echo $days_count?> дней</td>
 	</tr>
 <?
 			foreach ($arSearcherHits as $key => $count):
@@ -572,7 +572,7 @@ else:
 		
 ?>
 	<tr class="heading">
-		<td colspan="2">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</td>
+		<td colspan="2">Общая динамика индексирования сайта</td>
 	</tr>
 	<tr>
 		<td colspan="2"><img src="/bitrix/admin/searcher_graph.php?&lang=<?echo LANGUAGE_ID?>&find_date1_DAYS_TO_BACK=90<?foreach ($arSearchers as $key => $ar) echo '&find_searchers[]='.$key;?>&mode=list&find_summa=N&width=576&height=300" border="0" width="576" height="300" border="0" /><br /><br />
@@ -597,13 +597,13 @@ $tabControl->BeginNextTab();
 if (!CModule::IncludeModule('statistic')):
 ?>
 	<tr>
-		<td><?ShowError('пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');?></td>
+		<td><?ShowError('Эта функция недоступна без модуля Веб-аналитики');?></td>
 	</tr>
 <?
 elseif (count($arSearchers) <= 0):
 ?>
 	<tr>
-		<td>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ <a href="/bitrix/admin/settings.php?mid=seo&tabControl_active_tab=edit3">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ SEO</a>.</td>
+		<td>Для использования данной функции необходимо задать список используемых поисковых систем в <a href="/bitrix/admin/settings.php?mid=seo&tabControl_active_tab=edit3">настройках модуля SEO</a>.</td>
 	</tr>
 <?
 else:
@@ -650,7 +650,7 @@ else:
 		$cnt = count($arWords);
 ?>
 	<tr class="heading">
-		<td colspan="2">пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:</td>
+		<td colspan="2">На эту страницу попали с поиска по фразам:</td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center"><table class="phrases-table">
@@ -661,7 +661,7 @@ else:
 			$percent = intval(($arData['TOTAL']/$total) * 100);
 ?>
 		<tr>
-			<td align="left" width="30%"><a href="javascript:void(0)" onclick="BXToggle('bx_phrase_ex_<? echo $arData['ID']?>'); return false;" title="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"><?echo htmlspecialchars($word)?></td>
+			<td align="left" width="30%"><a href="javascript:void(0)" onclick="BXToggle('bx_phrase_ex_<? echo $arData['ID']?>'); return false;" title="подробная информация по переходам"><?echo htmlspecialchars($word)?></td>
 			<td width="70%">
 				<div style="height: 15px; border: solid 1px #<?echo $color = GetNextRGB($color, $cnt)?> !important; width: 100%; position: relative; cursor: pointer;" onclick="BXToggle('bx_phrase_ex_<? echo $arData['ID']?>'); return false;">
 					<div style="float: left; height: 15px; width: <?echo $percent?>%; background-color: <?echo $color; ?>; white-space: nowrap; position: absolute;">
@@ -674,9 +674,9 @@ else:
 		<tr id="bx_phrase_ex_<? echo $arData['ID']?>" style="display: none;">
 			<td colspan="2" align="center"><table>
 				<tr class="bx-th">
-					<td>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
-					<td>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
-					<td>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
+					<td>поисковик</td>
+					<td>переходов</td>
+					<td>последний переход</td>
 				</tr>
 <?
 			foreach ($arData['SEARCHERS'] as $searcher_id => $arSearcherData):
@@ -696,7 +696,7 @@ else:
 ?>
 		</table></td>
 	</tr><tr>
-		<td colspan="2" align="right"><a href="/bitrix/admin/phrase_list.php?lang=<?echo LANGUAGE_ID?>">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></td>
+		<td colspan="2" align="right"><a href="/bitrix/admin/phrase_list.php?lang=<?echo LANGUAGE_ID?>">Посмотреть в панели управления</a></td>
 	</tr>
 <?
 	}
@@ -714,7 +714,7 @@ $tabControl->BeginNextTab();
 if (!CModule::IncludeModule('statistic')):
 ?>
 	<tr>
-		<td><?ShowError('пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');?></td>
+		<td><?ShowError('Эта функция недоступна без модуля Веб-аналитики');?></td>
 	</tr>
 <?
 else:
@@ -754,7 +754,7 @@ else:
 		$cnt = count($arReferers);
 ?>
 	<tr class="heading">
-		<td colspan="2">пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:</td>
+		<td colspan="2">На эту страницу попали с сайтов:</td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center"><table class="referers-table">
@@ -765,7 +765,7 @@ else:
 			$percent = intval(($arData['TOTAL']/$total) * 100);
 ?>
 		<tr>
-			<td width="30%" align="left"><a href="javascript:void(0)" onclick="BXToggle('bx_referer_ex_<?echo CUtil::JSEscape($domain)?>'); return false;" title="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"><?echo htmlspecialchars($domain)?></td>
+			<td width="30%" align="left"><a href="javascript:void(0)" onclick="BXToggle('bx_referer_ex_<?echo CUtil::JSEscape($domain)?>'); return false;" title="подробная информация по ссылкам"><?echo htmlspecialchars($domain)?></td>
 			<td width="70%">
 				<div style="height: 15px; border: solid 1px #<?echo $color = GetNextRGB($color, $cnt)?> !important; width: 100%; position: relative; cursor: pointer;" onclick="BXToggle('bx_referer_ex_<?echo CUtil::JSEscape($domain)?>'); return false;">
 					<div style="float: left; height: 15px; width: <?echo $percent?>%; background-color: <?echo $color; ?>; white-space: nowrap; position: absolute;">
@@ -778,8 +778,8 @@ else:
 		<tr id="bx_referer_ex_<?echo CUtil::JSEscape($domain)?>" style="display: none;">
 			<td colspan="2" align="center"><table>
 				<tr class="bx-th">
-					<td width="90%">пїЅпїЅпїЅпїЅпїЅпїЅ</td>
-					<td width="10%">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td>
+					<td width="90%">ссылка</td>
+					<td width="10%">переходов</td>
 				</tr>
 <?
 			foreach ($arData['URL_FROM'] as $url => $count):
@@ -798,7 +798,7 @@ else:
 ?>
 	</table></td>
 </tr><tr>
-	<td colspan="2" align="right"><a href="/bitrix/admin/referer_list.php?lang=<?echo LANGUAGE_ID?>">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></td>
+	<td colspan="2" align="right"><a href="/bitrix/admin/referer_list.php?lang=<?echo LANGUAGE_ID?>">Посмотреть в панели управления</a></td>
 </tr>
 <?
 	}
@@ -810,7 +810,7 @@ $tabControl->Buttons(array("disabled"=>false));
 $tabControl->End();
 ?>
 </form>
-<script>
+<script type="text/javascript">
 window.BXToggle = function(id)
 {
 	with(document.getElementById(id)){if (style.display=='none')style.display='';else style.display='none';};

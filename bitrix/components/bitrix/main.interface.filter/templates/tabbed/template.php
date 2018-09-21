@@ -14,7 +14,7 @@ $gridManagerCfg = array(
 	'filterFields' => array()
 );
 ?>
-<script>
+<script type="text/javascript">
 	BX.ready(
 		function()
 		{
@@ -497,7 +497,7 @@ if(!(is_string($filterRows) && $filterRows !== ''))
 	$filterRows = implode(',', $fieldIDs);
 }
 
-?><script>
+?><script type="text/javascript">
 	BX.ready(
 			function()
 			{

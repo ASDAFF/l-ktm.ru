@@ -29,21 +29,21 @@
 <meta name="author" content="Logan Cai" />
 <meta name="website" content="http://www.phpletter.com" /> 
 
-<script src="jscripts/ajaxfilemanager_compressed.js"></script>
-<script src="jscripts/file_manager_general.js"></script>
+<script type="text/javascript" src="jscripts/ajaxfilemanager_compressed.js"></script>
+<script type="text/javascript" src="jscripts/file_manager_general.js"></script>
 <!--
 
-<script src="jscripts/jquery.js"></script>
-<script src="jscripts/form.js"></script>
-<script src="jscripts/select.js"></script>
-<script src="jscripts/thickbox.js"></script>
-<script src="jscripts/jeditable.js"></script>
-<script src="jscripts/media.js"></script>
-<script src="jscripts/file_manager_general.js"></script>
+<script type="text/javascript" src="jscripts/jquery.js"></script>
+<script type="text/javascript" src="jscripts/form.js"></script>
+<script type="text/javascript" src="jscripts/select.js"></script>
+<script type="text/javascript" src="jscripts/thickbox.js"></script>
+<script type="text/javascript" src="jscripts/jeditable.js"></script>
+<script type="text/javascript" src="jscripts/media.js"></script>
+<script type="text/javascript" src="jscripts/file_manager_general.js"></script>
 -->
 
-    <script src="jscripts/<?php echo 'for_' . CONFIG_EDITOR_NAME . '.js'; ?>"></script>
-<script>
+    <script type="text/javascript" src="jscripts/<?php echo 'for_' . CONFIG_EDITOR_NAME . '.js'; ?>"></script>
+<script type="text/javascript">
 function enableEditable()
 {
 			 $("#fileList tr[@id^=row] td.left").editable("<?php echo appendQueryString(CONFIG_URL_SAVE_NAME, makeQueryString(array('path'))); ?>",

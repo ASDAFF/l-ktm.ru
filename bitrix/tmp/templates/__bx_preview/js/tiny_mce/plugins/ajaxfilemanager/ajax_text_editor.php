@@ -41,15 +41,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="author" content="Logan Cai" />
 <meta name="website" content="http://www.phpletter.com" />
-<script src="jscripts/ajaxtexteditor_compressed.js"></script>
-<!--<script src="jscripts/jquery.js"></script>
-<script src="jscripts/form.js"></script>
-<script src="jscripts/select.js"></script>
-<script src="jscripts/jqModal.js"></script>
-<script src="jscripts/ajax_text_editor_general.js"></script>
+<script type="text/javascript" src="jscripts/ajaxtexteditor_compressed.js"></script>
+<!--<script type="text/javascript" src="jscripts/jquery.js"></script>
+<script type="text/javascript" src="jscripts/form.js"></script>
+<script type="text/javascript" src="jscripts/select.js"></script>
+<script type="text/javascript" src="jscripts/jqModal.js"></script>
+<script type="text/javascript" src="jscripts/ajax_text_editor_general.js"></script>
 -->
-<script src="jscripts/edit_area/edit_area_full.js"></script>
-<script>
+<script type="text/javascript" src="jscripts/edit_area/edit_area_full.js"></script>
+<script type="text/javascript">
 				var warningExtNotSelected = '<?php echo TXT_EXT_NOT_SELECTED; ?>';
 				var urlGetFolderList = '<?php echo appendQueryString(CONFIG_URL_GET_FOLDER_LIST, makeQueryString(array('path'))); ?>';
 				var warningInvalidName = '<?php echo TXT_SAVE_AS_ERR_NAME_INVALID; ?>';

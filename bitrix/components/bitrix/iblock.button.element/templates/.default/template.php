@@ -1,7 +1,7 @@
 <?
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
-?><script>
+?><script type="text/javascript">
 var jsDLG_<?php echo $arParams['CONTROL_ID']?> = new BX.CDialog({
 	'content_url': '<?php echo CUtil::JSEscape($arParams['~CONTENT_URL'])?>',
 	'draggable': true,

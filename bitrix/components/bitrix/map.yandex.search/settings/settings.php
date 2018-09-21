@@ -25,8 +25,8 @@ if ($_REQUEST['MAP_DATA'])
 	}
 }
 ?>
-<script src="/bitrix/components/bitrix/map.yandex.search/settings/settings_load.js"></script>
-<script>
+<script type="text/javascript" src="/bitrix/components/bitrix/map.yandex.search/settings/settings_load.js"></script>
+<script type="text/javascript">
 jsUtils.loadCSSFile('/bitrix/components/bitrix/map.yandex.search/settings/settings.css');
 var arPositionData = <?echo is_array($arData) && count($arData) > 0 ? CUtil::PhpToJsObject($arData) : '{}'?>;
 window._global_BX_UTF = <?echo defined('BX_UTF') && BX_UTF == true ? 'true' : 'false'?>;
@@ -82,7 +82,7 @@ $APPLICATION->IncludeComponent('bitrix:map.yandex.system', '', array(
 			</ul>
 	</div>
 </div>
-<script>
+<script type="text/javascript">
 if (null != window.jsYandexCESearch)
 	jsYandexCESearch.clear();
 </script>

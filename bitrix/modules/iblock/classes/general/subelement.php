@@ -441,7 +441,7 @@ class CAdminSubList extends CAdminList
 
 		if ($this->bPublicMode && $boolCloseMessage)
 		{
-			echo '<script>top.BX.WindowManager.Get().hideNotify();</script>';
+			echo '<script type="text/javascript">top.BX.WindowManager.Get().hideNotify();</script>';
 		}
 
 		echo $this->sPrologContent;
@@ -638,7 +638,7 @@ echo '<table class="adm-list-table" id="'.$this->table_id.'">
 		$tbl = CUtil::JSEscape($this->table_id);
 		$aUserOpt = CUserOptions::GetOption("global", "settings");
 		echo '
-<script>
+<script type="text/javascript">
 var '.$this->table_id.'= new BX.adminSubList("'.$tbl.'", {context_ctrl: '.($aUserOpt["context_ctrl"] == "Y"? "true":"false").'}, "'.$this->GetListUrl(true).'");
 function ReloadOffers()
 {
@@ -678,7 +678,7 @@ function ReloadOffers()
 //				echo $GLOBALS["adminPage"]->ShowScript();
 				echo '</head><body>
 <div id="'.$this->table_id.'_result_frame_div">'.$string.'</div>
-<script>
+<script type="text/javascript">
 ';
 				if($this->bEditMode || count($this->arUpdateErrorIDs)>0)
 				{
@@ -1400,7 +1400,7 @@ class CAdminSubForm extends CAdminForm
 
 <input type="hidden" id="'.$this->name.'_active_tab" name="'.$this->name.'_active_tab" value="'.htmlspecialcharsbx($this->selectedTab).'">
 
-<script>';
+<script type="text/javascript">';
 		$s = "";
 		foreach($this->tabs as $tab)
 		{
@@ -1449,7 +1449,7 @@ echo '
 		if ($this->bPublicModeBuffer)
 		{
 			echo '</div>';
-			echo '<script>BX.ready(function() {'.$this->publicObject.'.SwapContent(\''.$this->publicModeBuffer_id.'\');});</script>';
+			echo '<script type="text/javascript">BX.ready(function() {'.$this->publicObject.'.SwapContent(\''.$this->publicModeBuffer_id.'\');});</script>';
 		}
 	}
 }
@@ -1619,7 +1619,7 @@ class CAdminSubMessage extends CAdminMessage
 	{
 		if (defined('BX_PUBLIC_MODE') && BX_PUBLIC_MODE == 1)
 		{
-			return '<script>top.BX.WindowManager.Get().ShowError(\''.CUtil::JSEscape(str_replace(array('<br>', '<br />', '<BR>', '<BR />'), "\r\n", htmlspecialcharsback($this->message['DETAILS']? $this->message['DETAILS'] : $this->message['MESSAGE']))).'\');</script>';
+			return '<script type="text/javascript">top.BX.WindowManager.Get().ShowError(\''.CUtil::JSEscape(str_replace(array('<br>', '<br />', '<BR>', '<BR />'), "\r\n", htmlspecialcharsback($this->message['DETAILS']? $this->message['DETAILS'] : $this->message['MESSAGE']))).'\');</script>';
 		}
 		else
 		{

@@ -30,7 +30,7 @@ else:
 	}
 ?>
 
-<script>
+<script type="text/javascript">
 	function BX_SetPlacemarks_<?=$arParams['MAP_ID']?>(map)
 	{
 		if(typeof window["BX_YMapAddPlacemark"] != 'function')

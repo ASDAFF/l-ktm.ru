@@ -632,7 +632,7 @@ $variables = array(
 );
 ?>
 
-<script>
+<script type="text/javascript">
 var settingsDialog<?=$arParams["GRID_ID"]?>;
 var viewsDialog<?=$arParams["GRID_ID"]?>;
 var filtersDialog<?=$arParams["GRID_ID"]?>;

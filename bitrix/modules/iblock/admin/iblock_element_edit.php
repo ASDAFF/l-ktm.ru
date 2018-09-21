@@ -1103,7 +1103,7 @@ do{ //one iteration loop
 				{
 					if (defined('BX_PUBLIC_MODE') && BX_PUBLIC_MODE == 1)
 					{
-						?><script>
+						?><script type="text/javascript">
 						top.<? echo $strLookup; ?>.AddValue(<? echo $ID;?>);
 						top.BX.WindowManager.Get().AllowClose(); top.BX.WindowManager.Get().Close();
 						</script><?
@@ -1111,7 +1111,7 @@ do{ //one iteration loop
 					}
 					else
 					{
-						?><script>
+						?><script type="text/javascript">
 						window.opener.<? echo $strLookup; ?>.AddValue(<? echo $ID;?>);
 						window.close();
 						</script><?
@@ -1131,7 +1131,7 @@ do{ //one iteration loop
 					{
 						if($return_url === "reload_absence_calendar")
 						{
-							echo '<script>top.jsBXAC.__reloadCurrentView();</script>';
+							echo '<script type="text/javascript">top.jsBXAC.__reloadCurrentView();</script>';
 							die();
 						}
 						else
@@ -1175,7 +1175,7 @@ do{ //one iteration loop
 							"nobuttons" => "Y",
 						)), "&".$tabControl->ActiveTabParam()));
 					?>
-					<script>
+					<script type="text/javascript">
 						top.BX.ajax.get(
 							'/bitrix/admin/<? echo $l; ?>',
 							function (result) {
@@ -1214,14 +1214,14 @@ do{ //one iteration loop
 		{
 			if ($bAutocomplete)
 			{
-					?><script>
+					?><script type="text/javascript">
 					window.opener.<? echo $strLookup; ?>.AddValue(<? echo $ID;?>);
 					window.close();
 					</script><?
 			}
 			elseif(defined('BX_PUBLIC_MODE') && BX_PUBLIC_MODE == 1)
 			{
-				echo '<script>top.BX.closeWait(); top.BX.WindowManager.Get().AllowClose(); top.BX.WindowManager.Get().Close();</script>';
+				echo '<script type="text/javascript">top.BX.closeWait(); top.BX.WindowManager.Get().AllowClose(); top.BX.WindowManager.Get().Close();</script>';
 				die();
 			}
 			else
@@ -1237,7 +1237,7 @@ do{ //one iteration loop
 		{
 			if ($bAutocomplete)
 			{
-				?><script>
+				?><script type="text/javascript">
 					window.close();
 					</script><?
 			}
@@ -1651,7 +1651,7 @@ else:
 	{
 		CJSCore::Init(array('translit'));
 		?>
-		<script>
+		<script type="text/javascript">
 		var linked=<?if($bLinked) echo 'true'; else echo 'false';?>;
 		function set_linked()
 		{
@@ -1717,7 +1717,7 @@ else:
 		<?
 	}
 	?>
-	<script>
+	<script type="text/javascript">
 		var InheritedPropertiesTemplates = new JCInheritedPropertiesTemplates(
 			'<?echo $tabControl->GetName()?>_form',
 			'/bitrix/admin/iblock_templates.ajax.php?ENTITY_TYPE=E&IBLOCK_ID=<?echo intval($IBLOCK_ID)?>&ENTITY_ID=<?echo intval($ID)?>'
@@ -1866,7 +1866,7 @@ if(!empty($PROP)):
 		?>
 		<tr id="tr_PROPERTY_<?echo $prop_fields["ID"];?>"<?if ($prop_fields["PROPERTY_TYPE"]=="F"):?> class="adm-detail-file-row"<?endif?>>
 			<td class="adm-detail-valign-top" width="40%"><?if($prop_fields["HINT"]!=""):
-				?><span id="hint_<?echo $prop_fields["ID"];?>"></span><script>BX.hint_replace(BX('hint_<?echo $prop_fields["ID"];?>'), '<?echo CUtil::JSEscape($prop_fields["HINT"])?>');</script>&nbsp;<?
+				?><span id="hint_<?echo $prop_fields["ID"];?>"></span><script type="text/javascript">BX.hint_replace(BX('hint_<?echo $prop_fields["ID"];?>'), '<?echo CUtil::JSEscape($prop_fields["HINT"])?>');</script>&nbsp;<?
 			endif;?><?echo $tabControl->GetCustomLabelHTML();?>:</td>
 			<td width="60%"><?_ShowPropertyField('PROP['.$prop_fields["ID"].']', $prop_fields, $prop_fields["VALUE"], (($historyId <= 0) && (!$bVarsFromForm) && ($ID<=0)), $bVarsFromForm, 50000, $tabControl->GetFormName(), $bCopy);?></td>
 		</tr>
@@ -2333,7 +2333,7 @@ $tabControl->EndCustomField("DETAIL_TEXT",
 			?>
 			<tr>
 				<td>
-				<script>
+				<script type="text/javascript">
 				function deleteRow(button)
 				{
 					var my_row = button.parentNode.parentNode;
@@ -2502,7 +2502,7 @@ $tabControl->EndCustomField("DETAIL_TEXT",
 				for($i = 0; $i < $max_depth; $i++)
 					echo '<select id="select_IBLOCK_SECTION_'.$i.'" onchange="change_selection(\'select_IBLOCK_SECTION_\',  0, this.value, '.$i.', \'IBLOCK_SECTION[n'.$key.']\')"><option value="0">('.GetMessage("MAIN_NO").')</option></select>&nbsp;';
 				?>
-				<script>
+				<script type="text/javascript">
 					init_selection('select_IBLOCK_SECTION_', 0, '', 0);
 				</script>
 				</td>
@@ -2540,7 +2540,7 @@ $tabControl->EndCustomField("DETAIL_TEXT",
 			}
 			?>
 			</table>
-				<script>
+				<script type="text/javascript">
 				function deleteRow(button)
 				{
 					var my_row = button.parentNode.parentNode;
@@ -2586,7 +2586,7 @@ $tabControl->EndCustomField("DETAIL_TEXT",
 	<?endif;?>
 	</tr>
 	<input type="hidden" name="IBLOCK_SECTION[]" value="">
-	<script>
+	<script type="text/javascript">
 	function onSectionChanged()
 	{
 		var form = BX('<?echo CUtil::JSEscape($tabControl->GetFormName())?>');

@@ -1,5 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<script>
+<script type="text/javascript">
 BX.message({
 	"MPL_HAVE_WRITTEN" : "<?=GetMessageJS("MPL_HAVE_WRITTEN")?>",
 	"B_B_MS_LINK" : "<?=GetMessageJS("B_B_MS_LINK")?>",

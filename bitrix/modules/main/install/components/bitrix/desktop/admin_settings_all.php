@@ -135,7 +135,7 @@ for($i=1; $i<=count($arUserOptions); $i++):
 endfor?></div>
 <input type="hidden" name="itemcnt" value="<?echo $itemcnt?>" />
 <input type="hidden" name="desktop_backurl" value="<?=htmlspecialcharsbx(CUtil::JSEscape($desktop_backurl))?>">
-<script>
+<script type="text/javascript">
 var currentRow = null;
 
 var GLOBAL_bDisableActions = false;

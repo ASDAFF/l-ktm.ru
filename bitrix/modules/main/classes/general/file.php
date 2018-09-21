@@ -950,7 +950,7 @@ class CAllFile
 		if(!defined("ADMIN_SECTION") && $SHOWIMAGEFIRST!==true)
 		{
 			echo
-'<script>
+'<script type="text/javascript">
 function ImgShw(ID, width, height, alt)
 {
 	var scroll = "no";
@@ -2666,7 +2666,7 @@ function ImgShw(ID, width, height, alt)
 			{
 				$text = $APPLICATION->ConvertCharset($text, SITE_CHARSET, "UTF-8");
 				if ($Params["use_copyright"] == "Y")
-					$text = "ï¿½ ".$text;
+					$text = "© ".$text;
 			}
 
 			$result = @imagettftext($obj, $iSize, 0, $wm_pos["x"], $wm_pos["y"], $text_color, $font, $text);
